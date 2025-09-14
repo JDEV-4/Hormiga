@@ -11,7 +11,7 @@ class Post {
     required this.time,
     required this.text,
     required this.image,
-    this.likes = 0,
-    this.comments = 0,
+    required this.likes,
+    required this.comments,
   });
 }

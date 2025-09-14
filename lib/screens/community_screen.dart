@@ -17,7 +17,7 @@ class CommunityScreen extends StatelessWidget {
         comments: 21,
       ),
       Post(
-        author: 'Juana Mercado',
+        author: 'SINAPRED',
         time: '6 Mayo',
         text: 'Hicimos limpieza en la calle...',
         image: 'assets/images/sample1.png',

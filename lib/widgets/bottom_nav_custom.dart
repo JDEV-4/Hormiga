@@ -27,7 +27,7 @@ class BottomNavCustom extends StatelessWidget {
               onPressed: () => onTap(1),
               icon: const Icon(Icons.list_alt, color: Colors.white),
             ),
-            const SizedBox(width: 40), // space for FAB if needed
+            const SizedBox(width: 40),
             IconButton(
               onPressed: () => onTap(2),
               icon: const Icon(Icons.people, color: Colors.white),

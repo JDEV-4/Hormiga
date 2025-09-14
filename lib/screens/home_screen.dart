@@ -26,9 +26,10 @@ class _HomeScreenState extends State<HomeScreen> {
       comments: 21,
     ),
     Post(
-      author: 'Juana Mercado',
+      author: 'SINAPRED',
       time: '6 Mayo',
-      text: 'Hay acumulación de basura en el mercado. Solicitamos ayuda.',
+      text:
+          'Autoridades brindan informe sobre comportamientos y efectos de tormenta tropical Sara en Nicaragua.',
       image: 'assets/images/sample1.png',
       likes: 356,
       comments: 21,
