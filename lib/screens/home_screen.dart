@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import '../widgets/top_search_bar.dart';
 import '../widgets/feed_card.dart';
 import '../models/post.dart';
-import '../widgets/bottom_nav_custom.dart';
-import 'menu_screen.dart';
-import 'community_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -14,8 +10,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _tabIndex = 0;
-
   final List<Post> posts = [
     Post(
       author: 'Alcaldía de Jinotepe',
@@ -36,47 +30,93 @@ class _HomeScreenState extends State<HomeScreen> {
     ),
   ];
 
-  void _onNavTap(int index) {
-    setState(() {
-      _tabIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-    Widget content;
-    if (_tabIndex == 0) {
-      content = ListView(
+    return Scaffold(
+      // Drawer lateral
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(color: Colors.blue),
+              child: Align(
+                alignment: Alignment.bottomLeft,
+                child: Text(
+                  "Menú Principal",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.school, color: Colors.blue),
+              title: const Text("Módulo Educativo"),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: const Icon(Icons.map, color: Colors.green),
+              title: const Text("Mapa de Incidentes"),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: const Icon(Icons.people, color: Colors.orange),
+              title: const Text("Comunidad"),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: const Icon(Icons.bar_chart, color: Colors.purple),
+              title: const Text("Estadísticas"),
+              onTap: () {},
+            ),
+            const Divider(),
+            ListTile(
+              leading: const Icon(Icons.settings, color: Colors.grey),
+              title: const Text("Configuración"),
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
+
+      // AppBar
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Theme.of(context).primaryColor,
+        title: const Text(
+          "SINAPRED",
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.notifications, color: Colors.white),
+            onPressed: () {},
+          ),
+          Builder(
+            builder: (context) => IconButton(
+              icon: const CircleAvatar(
+                backgroundImage: AssetImage("assets/images/Avatar.png"),
+              ),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+            ),
+          ),
+          const SizedBox(width: 8),
+        ],
+      ),
+
+      // Lista de noticias
+      body: ListView(
+        padding: const EdgeInsets.all(8),
         children: [
-          const SizedBox(height: 8),
           for (final p in posts) FeedCard(post: p),
           const SizedBox(height: 80),
         ],
-      );
-    } else if (_tabIndex == 1) {
-      content = const MenuScreen();
-    } else if (_tabIndex == 2) {
-      content = const CommunityScreen();
-    } else {
-      content = const Center(child: Text('Estadísticas (próximo)'));
-    }
-
-    return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(72),
-        child: TopSearchBar(avatarAsset: 'assets/images/Avatar.png'),
       ),
-      body: content,
-      bottomNavigationBar: BottomNavCustom(
-        currentIndex: _tabIndex,
-        onTap: _onNavTap,
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Theme.of(context).primaryColor,
-        child: const Icon(Icons.add),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
