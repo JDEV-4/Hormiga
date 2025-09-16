@@ -1,5 +1,193 @@
 import 'package:flutter/material.dart';
+import 'package:hormiga/screens/detalle_amenaza_screen.dart';
 
+/// --- Pantalla de bienvenida del Qui
+class QuizWelcomeScreen extends StatefulWidget {
+  const QuizWelcomeScreen({super.key});
+
+  @override
+  State<QuizWelcomeScreen> createState() => _QuizWelcomeScreenState();
+}
+
+class _QuizWelcomeScreenState extends State<QuizWelcomeScreen>
+    with TickerProviderStateMixin {
+  bool showDot1 = false;
+  bool showDot2 = false;
+  bool showDot3 = false;
+  bool showCloud = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _startAnimation();
+  }
+
+  void _startAnimation() async {
+    await Future.delayed(const Duration(milliseconds: 500));
+    setState(() => showDot1 = true);
+
+    await Future.delayed(const Duration(milliseconds: 300));
+    setState(() => showDot2 = true);
+
+    await Future.delayed(const Duration(milliseconds: 300));
+    setState(() => showDot3 = true);
+
+    await Future.delayed(const Duration(milliseconds: 400));
+    setState(() => showCloud = true);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        alignment: Alignment.center,
+        children: [
+          // Fondo
+          Container(
+            width: double.infinity,
+            height: double.infinity,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/images/fondo.png"),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+
+          // Contenido
+          Column(
+            children: [
+              const SizedBox(height: 40),
+              const Spacer(),
+
+              Stack(
+                clipBehavior: Clip.none,
+                alignment: Alignment.center,
+                children: [
+                  Transform.translate(
+                    offset: const Offset(-10, 0),
+                    child: Image.asset(
+                      "assets/images/Hormiga.png",
+                      height: 300,
+                    ),
+                  ),
+
+                  // Puntits animados en diagonal
+                  if (showDot1)
+                    Positioned(
+                      top: 40,
+                      left: MediaQuery.of(context).size.width / 2 - 47,
+                      child: _buildDot(8),
+                    ),
+                  if (showDot2)
+                    Positioned(
+                      top: 20,
+                      left: MediaQuery.of(context).size.width / 2 - 30,
+                      child: _buildDot(12),
+                    ),
+                  if (showDot3)
+                    Positioned(
+                      top: 0,
+                      left: MediaQuery.of(context).size.width / 2 - 10,
+                      child: _buildDot(18),
+                    ),
+
+                  // Globo de pensamiento animado (fade-in)
+                  if (showCloud)
+                    Positioned(
+                      top: -128,
+                      left: 80,
+                      child: AnimatedOpacity(
+                        duration: const Duration(milliseconds: 600),
+                        opacity: showCloud ? 1 : 0,
+                        child: Container(
+                          padding: const EdgeInsets.all(20),
+                          constraints: const BoxConstraints(maxWidth: 220),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(30),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 8,
+                                offset: Offset(2, 4),
+                              ),
+                            ],
+                          ),
+                          child: const Text(
+                            "¡Hola! Soy tu amiga la Hormiga del SINAPRED.\nTe voy a guiar en este Quiz.",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black87,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ),
+                ],
+              ),
+
+              const SizedBox(height: 40),
+
+              // Botón
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 40,
+                    vertical: 18,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  backgroundColor: Colors.greenAccent[700],
+                  shadowColor: Colors.black45,
+                  elevation: 6,
+                ),
+                onPressed: () {
+                  // Navegación al Quiz
+                },
+                icon: const Icon(
+                  Icons.play_arrow,
+                  size: 28,
+                  color: Colors.white,
+                ),
+                label: const Text(
+                  "¡Comenzar!",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 40),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildDot(double size) {
+    return AnimatedOpacity(
+      duration: const Duration(milliseconds: 400),
+      opacity: 1,
+      child: Container(
+        width: size,
+        height: size,
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          shape: BoxShape.circle,
+        ),
+      ),
+    );
+  }
+}
+
+/// --- Pantalla principal Educativo ---
 class EducativoScreen extends StatefulWidget {
   const EducativoScreen({super.key});
 
@@ -38,50 +226,6 @@ class _EducativoScreenState extends State<EducativoScreen>
     },
   ];
 
-  /// --- Preguntas del Quiz ---
-  final List<Map<String, Object>> _preguntas = [
-    {
-      "pregunta": "¿Qué debes hacer durante un sismo?",
-      "opciones": [
-        "Salir corriendo",
-        "Mantener la calma y buscar un lugar seguro",
-        "Encender la estufa",
-        "Quedarte en el ascensor",
-      ],
-      "respuesta": 1,
-    },
-    {
-      "pregunta": "¿Cuál es la señal de evacuación en caso de incendio?",
-      "opciones": [
-        "Luz roja",
-        "Sirena o alarma",
-        "Campanas de iglesia",
-        "Mensajes de texto",
-      ],
-      "respuesta": 1,
-    },
-    {
-      "pregunta": "¿Qué hacer antes de un huracán?",
-      "opciones": [
-        "Esperar sin hacer nada",
-        "Preparar un kit de emergencia",
-        "Salir a nadar",
-        "Encender fuegos artificiales",
-      ],
-      "respuesta": 1,
-    },
-  ];
-
-  int _preguntaActual = -1; // -1 significa que aún no inicia
-  int _puntaje = 0;
-  bool _quizTerminado = false;
-
-  final List<Map<String, dynamic>> _ranking = [
-    {"nombre": "Ana", "puntaje": 8},
-    {"nombre": "Carlos", "puntaje": 6},
-    {"nombre": "Lucía", "puntaje": 5},
-  ];
-
   @override
   void initState() {
     super.initState();
@@ -94,206 +238,86 @@ class _EducativoScreenState extends State<EducativoScreen>
     super.dispose();
   }
 
+  /// --- Sección Aprende ---
   Widget _buildAprende() {
-    return ListView.builder(
+    return Padding(
       padding: const EdgeInsets.all(12),
-      itemCount: amenazas.length,
-      itemBuilder: (context, index) {
-        final amenaza = amenazas[index];
-        return Card(
-          elevation: 4,
-          margin: const EdgeInsets.symmetric(vertical: 10),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
-          ),
-          child: ListTile(
-            contentPadding: const EdgeInsets.symmetric(
-              vertical: 12,
-              horizontal: 16,
-            ),
-            leading: Text(
-              amenaza["icono"]!,
-              style: const TextStyle(fontSize: 28),
-            ),
-            title: Text(
-              amenaza["titulo"]!,
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-            ),
-            subtitle: Text(
-              amenaza["descripcion"]!,
-              style: const TextStyle(fontSize: 14, color: Colors.black54),
-            ),
-            trailing: const Icon(Icons.arrow_forward_ios, size: 18),
+      child: GridView.count(
+        shrinkWrap: true,
+        physics: const BouncingScrollPhysics(),
+        crossAxisCount: 2,
+        mainAxisSpacing: 12,
+        crossAxisSpacing: 12,
+        childAspectRatio: 0.9,
+        children: List.generate(amenazas.length, (index) {
+          final amenaza = amenazas[index];
+          return GestureDetector(
             onTap: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text("Abrir detalles de ${amenaza['titulo']}"),
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetalleAmenazaScreen(
+                    titulo: amenaza["titulo"]!,
+                    descripcion: amenaza["descripcion"]!,
+                    icono: amenaza["icono"]!,
+                  ),
                 ),
               );
             },
-          ),
-        );
-      },
-    );
-  }
-
-  /// --- Vista del Quiz con la hormiga ---
-  Widget _buildQuiz() {
-    if (_preguntaActual == -1) {
-      return _buildBienvenidaHormiga();
-    }
-
-    if (_quizTerminado) {
-      return _buildResultadoHormiga();
-    }
-
-    final pregunta = _preguntas[_preguntaActual];
-    final opciones = pregunta["opciones"] as List<String>;
-
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        children: [
-          _buildHormigaBubble("¡Tú puedes! Responde con calma."),
-          const SizedBox(height: 20),
-          Card(
-            color: Colors.blue[50],
-            elevation: 4,
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                children: [
-                  Text(
-                    "Pregunta ${_preguntaActual + 1}/${_preguntas.length}",
-                    style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+            child: Card(
+              elevation: 6,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18),
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(18),
+                  gradient: LinearGradient(
+                    colors: [Colors.blue.shade100, Colors.blue.shade50],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                ),
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      amenaza["icono"]!,
+                      style: const TextStyle(fontSize: 40),
                     ),
-                  ),
-                  const SizedBox(height: 12),
-                  Text(
-                    pregunta["pregunta"] as String,
-                    style: const TextStyle(fontSize: 16),
-                  ),
-                  const SizedBox(height: 20),
-                  ...List.generate(opciones.length, (i) {
-                    return Card(
-                      child: ListTile(
-                        title: Text(opciones[i]),
-                        onTap: () {
-                          setState(() {
-                            if (i == pregunta["respuesta"]) {
-                              _puntaje++;
-                            }
-                            if (_preguntaActual < _preguntas.length - 1) {
-                              _preguntaActual++;
-                            } else {
-                              _quizTerminado = true;
-                            }
-                          });
-                        },
+                    const SizedBox(height: 10),
+                    Text(
+                      amenaza["titulo"]!,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        color: Colors.black87,
                       ),
-                    );
-                  }),
-                ],
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      amenaza["descripcion"]!,
+                      style: const TextStyle(
+                        fontSize: 13,
+                        color: Colors.black54,
+                      ),
+                      textAlign: TextAlign.center,
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          );
+        }),
       ),
     );
   }
 
-  /// --- Pantalla de bienvenida con la hormiga ---
-  Widget _buildBienvenidaHormiga() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset("assets/images/Hormiga.png", height: 120),
-          const SizedBox(height: 20),
-          _buildHormigaBubble(
-            "👋 ¡Hola! Soy la Hormiga del SINAPRED.\nTe acompañaré en este Quiz.",
-          ),
-          const SizedBox(height: 30),
-          ElevatedButton.icon(
-            onPressed: () {
-              setState(() {
-                _preguntaActual = 0;
-              });
-            },
-            icon: const Icon(Icons.play_arrow),
-            label: const Text("Iniciar Quiz"),
-          ),
-        ],
-      ),
-    );
-  }
-
-  /// --- Pantalla de resultados con la hormiga ---
-  Widget _buildResultadoHormiga() {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Image.asset("assets/images/Hormiga.png", height: 120),
-        const SizedBox(height: 20),
-        _buildHormigaBubble("🎉 ¡Felicidades! Tu puntaje es $_puntaje."),
-        const SizedBox(height: 20),
-        const Text(
-          "🏆 Ranking de jugadores",
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(height: 10),
-        Expanded(
-          child: ListView.builder(
-            itemCount: _ranking.length,
-            itemBuilder: (context, index) {
-              final jugador = _ranking[index];
-              return Card(
-                margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
-                child: ListTile(
-                  leading: CircleAvatar(child: Text("${index + 1}")),
-                  title: Text(jugador["nombre"]),
-                  trailing: Text(
-                    "Puntos: ${jugador['puntaje']}",
-                    style: const TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                ),
-              );
-            },
-          ),
-        ),
-        ElevatedButton(
-          onPressed: () {
-            setState(() {
-              _preguntaActual = -1;
-              _puntaje = 0;
-              _quizTerminado = false;
-            });
-          },
-          child: const Text("Reintentar"),
-        ),
-      ],
-    );
-  }
-
-  /// --- Globito de diálogo de la hormiga ---
-  Widget _buildHormigaBubble(String mensaje) {
-    return Container(
-      padding: const EdgeInsets.all(12),
-      margin: const EdgeInsets.symmetric(horizontal: 20),
-      decoration: BoxDecoration(
-        color: Colors.orange[100],
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: Text(
-        mensaje,
-        style: const TextStyle(fontSize: 16),
-        textAlign: TextAlign.center,
-      ),
-    );
-  }
-
+  /// --- Sección Descargas ---
   Widget _buildDescargas() {
     return const Center(
       child: Text(
@@ -304,6 +328,7 @@ class _EducativoScreenState extends State<EducativoScreen>
     );
   }
 
+  /// --- Build principal ---
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -326,7 +351,11 @@ class _EducativoScreenState extends State<EducativoScreen>
       ),
       body: TabBarView(
         controller: _tabController,
-        children: [_buildAprende(), _buildQuiz(), _buildDescargas()],
+        children: [
+          _buildAprende(),
+          const QuizWelcomeScreen(),
+          _buildDescargas(),
+        ],
       ),
     );
   }

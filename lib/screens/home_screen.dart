@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/feed_card.dart';
 import '../models/post.dart';
-import 'educativo_screen.dart'; // 🔹 Importamos la nueva pantalla
+import 'educativo_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
       likes: 231,
       comments: 21,
       type: "municipality",
-      avatarUrl: "assets/images/JINOTEPE.png", // 🔹 avatar del autor
+      avatarUrl: "assets/images/JINOTEPE.png",
     ),
     Post(
       author: 'SINAPRED',
@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
       likes: 356,
       comments: 21,
       type: "official",
-      avatarUrl: "assets/images/SINAPRED.jpg", // 🔹 avatar de SINAPRED
+      avatarUrl: "assets/images/SINAPRED.jpg",
     ),
     Post(
       author: 'Carlos Gómez',
@@ -42,13 +42,12 @@ class _HomeScreenState extends State<HomeScreen> {
       likes: 89,
       comments: 12,
       type: "citizen",
-      avatarUrl: "assets/images/Avatar.png", // 🔹 avatar genérico
+      avatarUrl: "assets/images/Avatar.png",
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
-    // separar oficiales de los demás
     List<Post> officialPosts = posts
         .where((p) => p.type == "official")
         .toList();
@@ -100,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            // 🔹 Navegar al módulo educativo
+            //Navegar al módulo educativo
             ListTile(
               leading: const Icon(Icons.school, color: Colors.blue),
               title: const Text("Módulo Educativo"),
