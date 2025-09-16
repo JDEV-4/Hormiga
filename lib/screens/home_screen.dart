@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/feed_card.dart';
 import '../models/post.dart';
+import 'educativo_screen.dart'; // 🔹 Importamos la nueva pantalla
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -15,10 +16,12 @@ class _HomeScreenState extends State<HomeScreen> {
       author: 'Alcaldía de Jinotepe',
       time: '10 Mayo',
       text:
-          'SINAPRED, con el apoyo técnico y financiero de UNICEF, promueve la incorporación del enfoque de derechos de la niñez en el Manual básico de capacitación y entrenamiento a las Brigadas Municipales de Respuesta (BRIMUR).',
+          'SINAPRED, con apoyo de UNICEF, promueve la capacitación de las Brigadas Municipales de Respuesta (BRIMUR).',
       image: 'assets/images/Alcaldia.jpg',
       likes: 231,
       comments: 21,
+      type: "municipality",
+      avatarUrl: "assets/images/JINOTEPE.png", // 🔹 avatar del autor
     ),
     Post(
       author: 'SINAPRED',
@@ -28,18 +31,36 @@ class _HomeScreenState extends State<HomeScreen> {
       image: 'assets/images/cortez.jpg',
       likes: 356,
       comments: 21,
+      type: "official",
+      avatarUrl: "assets/images/SINAPRED.jpg", // 🔹 avatar de SINAPRED
+    ),
+    Post(
+      author: 'Carlos Gómez',
+      time: '7 Mayo',
+      text: 'Fuerte lluvia en mi barrio, calles inundadas.',
+      image: 'assets/images/colapso.jpg',
+      likes: 89,
+      comments: 12,
+      type: "citizen",
+      avatarUrl: "assets/images/Avatar.png", // 🔹 avatar genérico
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
+    // separar oficiales de los demás
+    List<Post> officialPosts = posts
+        .where((p) => p.type == "official")
+        .toList();
+    List<Post> otherPosts = posts.where((p) => p.type != "official").toList();
+
     return Scaffold(
       // Drawer lateral
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            // Header PARA centra avatar
+            // Header usuario
             Container(
               padding: const EdgeInsets.symmetric(vertical: 24),
               decoration: const BoxDecoration(
@@ -79,10 +100,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
+            // 🔹 Navegar al módulo educativo
             ListTile(
               leading: const Icon(Icons.school, color: Colors.blue),
               title: const Text("Módulo Educativo"),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const EducativoScreen(),
+                  ),
+                );
+              },
             ),
             ListTile(
               leading: const Icon(Icons.map, color: Colors.green),
@@ -131,9 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           IconButton(
             icon: const Icon(Icons.notifications, color: Colors.white),
-            onPressed: () {
-              // lógica de notificaciones
-            },
+            onPressed: () {},
           ),
           Builder(
             builder: (context) => GestureDetector(
@@ -149,11 +176,13 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
 
-      // Feed de noticias
+      // Feed
       body: ListView(
         children: [
           const SizedBox(height: 8),
-          for (final p in posts) FeedCard(post: p),
+          for (final p in officialPosts) FeedCard(post: p),
+          const Divider(),
+          for (final p in otherPosts) FeedCard(post: p),
           const SizedBox(height: 16),
         ],
       ),

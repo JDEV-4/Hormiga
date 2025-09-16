@@ -53,18 +53,59 @@ class _FeedCardState extends State<FeedCard>
 
   @override
   Widget build(BuildContext context) {
+    // 🔹 Estilos por tipo de usuario
+    Color borderColor;
+    IconData? badgeIcon;
+
+    switch (widget.post.type) {
+      case "official": // SINAPRED
+        borderColor = Colors.redAccent;
+        badgeIcon = Icons.campaign;
+        break;
+      case "municipality": // Alcaldías
+        borderColor = Colors.blueAccent;
+        badgeIcon = Icons.account_balance;
+        break;
+      default: // ciudadano normal
+        borderColor = Colors.grey.shade300;
+        badgeIcon = null;
+    }
+
     return Card(
       margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+        side: BorderSide(color: borderColor, width: 2),
+      ),
       elevation: 3,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // autor y fecha
+          // Autor y fecha
           ListTile(
-            leading: const CircleAvatar(
-              backgroundImage: AssetImage("assets/images/Avatar.png"),
+            leading: Stack(
+              children: [
+                CircleAvatar(
+                  backgroundImage: AssetImage(
+                    widget.post.avatarUrl,
+                  ), // 🔹 dinámico
+                ),
+                if (badgeIcon != null)
+                  Positioned(
+                    right: -2,
+                    bottom: -2,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: borderColor,
+                        shape: BoxShape.circle,
+                      ),
+                      padding: const EdgeInsets.all(2),
+                      child: Icon(badgeIcon, color: Colors.white, size: 14),
+                    ),
+                  ),
+              ],
             ),
+
             title: Text(
               widget.post.author,
               style: const TextStyle(fontWeight: FontWeight.bold),
@@ -72,7 +113,7 @@ class _FeedCardState extends State<FeedCard>
             subtitle: Text(widget.post.time),
           ),
 
-          // publicación
+          // Texto
           if (widget.post.text.isNotEmpty)
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -125,7 +166,7 @@ class _FeedCardState extends State<FeedCard>
                 IconButton(
                   icon: const Icon(Icons.share, color: Colors.blueAccent),
                   onPressed: () {
-                    //lógica de compartir
+                    // lógica de compartir
                   },
                 ),
               ],
