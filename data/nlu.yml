@@ -1,0 +1,27 @@
+version: "3.1"
+
+nlu:
+  - intent: saludo
+    examples: |
+      - hola
+      - buenas
+      - hey
+      - ¿qué tal?
+
+  - intent: despedida
+    examples: |
+      - adiós
+      - nos vemos
+      - hasta luego
+
+  - intent: preguntar_prevencion
+    examples: |
+      - ¿cómo prevenir inundaciones?
+      - consejos para sismos
+      - medidas ante deslaves
+
+  - intent: reportar_incidente
+    examples: |
+      - quiero reportar una inundación
+      - hay un deslave cerca
+      - quiero avisar de un derrumbe

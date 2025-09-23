@@ -1,0 +1,41 @@
+version: "3.1"
+
+intents:
+  - saludo
+  - despedida
+  - preguntar_prevencion
+  - reportar_incidente
+  - greet
+  - mood_great
+  - mood_unhappy
+  - affirm
+  - deny
+
+responses:
+  utter_saludo:
+    - text: "¡Hola! Soy La Hormiga 🐜. ¿Quieres aprender sobre prevención o reportar un incidente?"
+  utter_despedida:
+    - text: "¡Hasta luego! Mantente seguro."
+  utter_prevencion:
+    - text: "Aquí tienes algunos consejos de prevención: ..."
+  utter_reportar:
+    - text: "Perfecto, te llevaré al módulo de reportes. Luego puedo mostrarte consejos de prevención."
+  utter_greet:
+    - text: "¡Hola! ¿Cómo estás?"
+  utter_happy:
+    - text: "¡Me alegra saber eso! 😊"
+  utter_cheer_up:
+    - text: "¡Ánimo! Todo va a estar bien."
+  utter_did_that_help:
+    - text: "¿Eso te ayudó?"
+  utter_goodbye:
+    - text: "¡Adiós! Cuídate."
+
+actions:
+  - action_redirigir_reporte
+
+slots:
+  tipo_incidente:
+    type: text
+    mappings:
+      - type: from_text

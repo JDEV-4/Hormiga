@@ -1,0 +1,57 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "affirm": 0,
+        "back": 1,
+        "deny": 2,
+        "despedida": 3,
+        "greet": 4,
+        "mood_great": 5,
+        "mood_unhappy": 6,
+        "nlu_fallback": 7,
+        "out_of_scope": 8,
+        "preguntar_prevencion": 9,
+        "reportar_incidente": 10,
+        "restart": 11,
+        "saludo": 12,
+        "session_start": 13
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_redirigir_reporte": 13,
+        "utter_cheer_up": 14,
+        "utter_despedida": 15,
+        "utter_did_that_help": 16,
+        "utter_goodbye": 17,
+        "utter_greet": 18,
+        "utter_happy": 19,
+        "utter_prevencion": 20,
+        "utter_reportar": 21,
+        "utter_saludo": 22
+      },
+      "entities": {},
+      "slots": {
+        "tipo_incidente_0": 0
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}
