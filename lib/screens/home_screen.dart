@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hormiga/screens/mapa_incidentes_screen.dart';
 import '../widgets/feed_card.dart';
 import '../models/post.dart';
 import 'educativo_screen.dart';
@@ -115,7 +116,14 @@ class _HomeScreenState extends State<HomeScreen> {
             ListTile(
               leading: const Icon(Icons.map, color: Colors.green),
               title: const Text("Mapa de Incidentes"),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MapaIncidentesScreen(),
+                  ),
+                );
+              },
             ),
             ListTile(
               leading: const Icon(Icons.people, color: Colors.orange),
