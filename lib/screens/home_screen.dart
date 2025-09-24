@@ -4,6 +4,8 @@ import '../widgets/feed_card.dart';
 import '../models/post.dart';
 import 'educativo_screen.dart';
 
+import 'chatbot_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -135,11 +137,20 @@ class _HomeScreenState extends State<HomeScreen> {
               title: const Text("Estadísticas"),
               onTap: () {},
             ),
+
             ListTile(
               leading: const Icon(Icons.chat, color: Colors.redAccent),
               title: const Text("Chatbot La Hormiga"),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ChatbotScreen(),
+                  ),
+                );
+              },
             ),
+
             const Divider(height: 30, thickness: 1),
             ListTile(
               leading: const Icon(Icons.settings, color: Colors.grey),

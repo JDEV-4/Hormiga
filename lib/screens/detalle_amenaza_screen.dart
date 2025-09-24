@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'quiz_welcome_screen.dart'; // 👈 importa tu QuizWelcomeScreen
+import 'quiz_welcome_screen.dart';
 
 class DetalleAmenazaScreen extends StatelessWidget {
   final String titulo;
