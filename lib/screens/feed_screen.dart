@@ -1,65 +1,88 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../models/post.dart';
-import '../widgets/feed_card.dart';
 
-class FeedScreen extends StatelessWidget {
-  FeedScreen({super.key});
+class FeedCard extends StatelessWidget {
+  final Post post;
 
-  final List<Post> posts = [
-    Post(
-      author: 'Alcaldía de Jinotepe',
-      time: '10 Mayo',
-      text:
-          'SINAPRED, con apoyo de UNICEF, promueve la capacitación de las Brigadas Municipales de Respuesta (BRIMUR).',
-      image: 'assets/images/Alcaldia.jpg',
-      likes: 231,
-      comments: 21,
-      type: "municipality",
-      avatarUrl: "assets/images/Alcaldia.jpg", // 🔹 avatar del autor
-    ),
-
-    Post(
-      author: 'SINAPRED',
-      time: '6 Mayo',
-      text:
-          'Autoridades brindan informe sobre comportamientos y efectos de tormenta tropical Sara en Nicaragua.',
-      image: 'assets/images/cortez.jpg',
-      likes: 356,
-      comments: 21,
-      type: "official",
-      avatarUrl: "assets/images/SINAPRED.jpg", // 🔹 avatar de SINAPRED
-    ),
-
-    Post(
-      author: 'Carlos Gómez',
-      time: '7 Mayo',
-      text: 'Fuerte lluvia en mi barrio, calles inundadas.',
-      image: 'assets/images/colapso.jpg',
-      likes: 89,
-      comments: 12,
-      type: "citizen",
-      avatarUrl: "assets/images/Avatar.png", // 🔹 avatar genérico
-    ),
-  ];
+  const FeedCard({super.key, required this.post});
 
   @override
   Widget build(BuildContext context) {
-    // 🔹 separar oficiales de los demás
-    List<Post> officialPosts = posts
-        .where((p) => p.type == "official")
-        .toList();
-    List<Post> otherPosts = posts.where((p) => p.type != "official").toList();
-
-    return SafeArea(
-      child: ListView(
+    return Card(
+      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      elevation: 3,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🔴 Oficiales siempre arriba
-          for (final p in officialPosts) FeedCard(post: p),
+          //Encabezado con avatar y autor
+          ListTile(
+            leading: CircleAvatar(
+              backgroundImage: AssetImage(post.avatarUrl),
+              radius: 24,
+            ),
+            title: Text(
+              post.author,
+              style: GoogleFonts.sourceSans3(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            subtitle: Text(
+              post.time,
+              style: GoogleFonts.sourceSans3(
+                fontSize: 14,
+                color: Colors.grey[600],
+              ),
+            ),
+          ),
 
-          const Divider(),
+          // Imagen del post
+          ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Image.asset(
+              post.image,
+              fit: BoxFit.cover,
+              width: double.infinity,
+              height: 180,
+            ),
+          ),
 
-          // 🔹 El resto de usuarios
-          for (final p in otherPosts) FeedCard(post: p),
+          //Texto del post
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Text(
+              post.text,
+              style: GoogleFonts.sourceSans3(
+                fontSize: 15,
+                color: Colors.black87,
+              ),
+            ),
+          ),
+
+          // Reacciones
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12.0),
+            child: Row(
+              children: [
+                Icon(Icons.thumb_up_alt_outlined, size: 18, color: Colors.grey),
+                const SizedBox(width: 4),
+                Text(
+                  '${post.likes}',
+                  style: GoogleFonts.sourceSans3(fontSize: 14),
+                ),
+                const SizedBox(width: 16),
+                Icon(Icons.comment_outlined, size: 18, color: Colors.grey),
+                const SizedBox(width: 4),
+                Text(
+                  '${post.comments}',
+                  style: GoogleFonts.sourceSans3(fontSize: 14),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 12),
         ],
       ),
     );

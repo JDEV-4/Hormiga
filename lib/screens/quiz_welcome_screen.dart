@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class QuizWelcomeScreen extends StatefulWidget {
-  const QuizWelcomeScreen({super.key});
+  final Color? color;
+
+  const QuizWelcomeScreen({super.key, this.color});
 
   @override
   State<QuizWelcomeScreen> createState() => _QuizWelcomeScreenState();
@@ -13,6 +15,13 @@ class _QuizWelcomeScreenState extends State<QuizWelcomeScreen>
   bool showDot2 = false;
   bool showDot3 = false;
   bool showCloud = false;
+
+  // Paleta de colores
+  static const Color kAppBarBlue = Color(0xFF1976D2); // Azul del HomeScreen
+  static const Color kBackground = Color(0xFFE3F2FD); // Azul cielo claro
+  static const Color kTextDark = Color(0xFF333333); // Gris oscuro
+  static const Color kDialogWhite = Color(0xFFFFFFFF); // Blanco puro
+  static const Color kShadow = Color(0x42000000); // Negro translúcido
 
   @override
   void initState() {
@@ -36,7 +45,19 @@ class _QuizWelcomeScreenState extends State<QuizWelcomeScreen>
 
   @override
   Widget build(BuildContext context) {
+    final Color mainColor = widget.color ?? kAppBarBlue;
+
     return Scaffold(
+      backgroundColor: kBackground,
+      appBar: AppBar(
+        title: const Text(
+          "Quiz de Sismos",
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+        ),
+        centerTitle: true,
+        backgroundColor: mainColor,
+        elevation: 2,
+      ),
       body: Stack(
         alignment: Alignment.center,
         children: [
@@ -44,20 +65,13 @@ class _QuizWelcomeScreenState extends State<QuizWelcomeScreen>
           Container(
             width: double.infinity,
             height: double.infinity,
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage("assets/images/fondo.png"),
-                fit: BoxFit.cover,
-              ),
-            ),
+            color: kBackground,
           ),
-
           // Contenido
           Column(
             children: [
               const SizedBox(height: 40),
               const Spacer(),
-
               Stack(
                 clipBehavior: Clip.none,
                 alignment: Alignment.center,
@@ -69,7 +83,6 @@ class _QuizWelcomeScreenState extends State<QuizWelcomeScreen>
                       height: 300,
                     ),
                   ),
-
                   // Puntos animados
                   if (showDot1)
                     Positioned(
@@ -89,7 +102,6 @@ class _QuizWelcomeScreenState extends State<QuizWelcomeScreen>
                       left: MediaQuery.of(context).size.width / 2 - 10,
                       child: _buildDot(18),
                     ),
-
                   // Globo de diálogo
                   if (showCloud)
                     Positioned(
@@ -102,11 +114,11 @@ class _QuizWelcomeScreenState extends State<QuizWelcomeScreen>
                           padding: const EdgeInsets.all(20),
                           constraints: const BoxConstraints(maxWidth: 220),
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: kDialogWhite,
                             borderRadius: BorderRadius.circular(30),
                             boxShadow: const [
                               BoxShadow(
-                                color: Colors.black26,
+                                color: kShadow,
                                 blurRadius: 8,
                                 offset: Offset(2, 4),
                               ),
@@ -117,7 +129,7 @@ class _QuizWelcomeScreenState extends State<QuizWelcomeScreen>
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
-                              color: Colors.black87,
+                              color: kTextDark,
                             ),
                             textAlign: TextAlign.center,
                           ),
@@ -126,9 +138,7 @@ class _QuizWelcomeScreenState extends State<QuizWelcomeScreen>
                     ),
                 ],
               ),
-
               const SizedBox(height: 40),
-
               // Botón comenzar
               ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(
@@ -139,13 +149,11 @@ class _QuizWelcomeScreenState extends State<QuizWelcomeScreen>
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  backgroundColor: Colors.greenAccent[700],
+                  backgroundColor: mainColor,
                   shadowColor: Colors.black45,
                   elevation: 6,
                 ),
-                onPressed: () {
-                  // Aquí navegas al quiz real
-                },
+                onPressed: () {},
                 icon: const Icon(
                   Icons.play_arrow,
                   size: 28,
@@ -160,7 +168,6 @@ class _QuizWelcomeScreenState extends State<QuizWelcomeScreen>
                   ),
                 ),
               ),
-
               const SizedBox(height: 40),
             ],
           ),

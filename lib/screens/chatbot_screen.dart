@@ -16,11 +16,20 @@ class _ChatbotScreenState extends State<ChatbotScreen> {
   //localhost
   final String _rasaUrl = "http://192.168.1.55:5005/webhooks/rest/webhook"; //IP
 
-  // Función para enviar mensaje a Rasa
+  @override
+  void initState() {
+    super.initState();
+    // Mensaje de bienvenida automático
+    _messages.add({
+      "role": "bot",
+      "text":
+          "👋 Hola, soy La Hormiga 🐜. ¿Quieres aprender sobre prevención o reportar un incidente?",
+    });
+  }
+
   Future<void> _sendMessage(String text) async {
     if (text.isEmpty) return;
 
-    // Agregar mensaje del usuario al chat
     setState(() {
       _messages.add({"role": "user", "text": text});
     });
@@ -71,79 +80,102 @@ class _ChatbotScreenState extends State<ChatbotScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final primaryColor = const Color(0xFF1976D2);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Chatbot La Hormiga"),
-        backgroundColor: const Color(0xFF1976D2),
+        backgroundColor: primaryColor,
+        elevation: 0,
       ),
       body: Column(
         children: [
-          // Avatar del bot
-          Container(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              children: [
-                Image.asset("assets/images/Hormiga.png", width: 120),
-                const SizedBox(height: 8),
-                const Text(
-                  "Soy La Hormiga 🐜, tu asistente de prevención.",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                  textAlign: TextAlign.center,
-                ),
-              ],
-            ),
-          ),
-
-          const Divider(),
-
           // Mensajes
           Expanded(
             child: ListView.builder(
+              padding: const EdgeInsets.all(8),
               itemCount: _messages.length,
               itemBuilder: (context, index) {
                 final msg = _messages[index];
                 final isUser = msg["role"] == "user";
 
-                return Container(
-                  alignment: isUser
-                      ? Alignment.centerRight
-                      : Alignment.centerLeft,
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 6,
-                    horizontal: 12,
-                  ),
-                  child: Container(
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      color: isUser ? Colors.blue[100] : Colors.grey[200],
-                      borderRadius: BorderRadius.circular(12),
+                return Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: isUser
+                      ? MainAxisAlignment.end
+                      : MainAxisAlignment.start,
+                  children: [
+                    if (!isUser)
+                      CircleAvatar(
+                        backgroundColor: Colors.white,
+                        backgroundImage: AssetImage(
+                          "assets/images/Hormiga.png",
+                        ),
+                        radius: 18,
+                      ),
+                    const SizedBox(width: 6),
+                    Flexible(
+                      child: Container(
+                        margin: const EdgeInsets.symmetric(vertical: 4),
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: isUser
+                              ? primaryColor.withOpacity(0.15)
+                              : Colors.grey[200],
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Text(
+                          msg["text"] ?? "",
+                          style: TextStyle(
+                            color: isUser ? primaryColor : Colors.black87,
+                          ),
+                        ),
+                      ),
                     ),
-                    child: Text(msg["text"] ?? ""),
-                  ),
+                  ],
                 );
               },
             ),
           ),
 
           // Input del usuario
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Expanded(
-                  child: TextField(
-                    controller: _controller,
-                    decoration: const InputDecoration(
-                      hintText: "Escribe tu mensaje...",
-                      border: OutlineInputBorder(),
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      controller: _controller,
+                      decoration: InputDecoration(
+                        hintText: "Escribe tu mensaje...",
+                        filled: true,
+                        fillColor: Colors.grey[100],
+                        contentPadding: const EdgeInsets.symmetric(
+                          vertical: 12,
+                          horizontal: 16,
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(24),
+                          borderSide: BorderSide(color: Colors.grey.shade300),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(24),
+                          borderSide: BorderSide(color: primaryColor, width: 2),
+                        ),
+                      ),
                     ),
                   ),
-                ),
-                IconButton(
-                  icon: const Icon(Icons.send, color: Colors.blue),
-                  onPressed: () => _sendMessage(_controller.text),
-                ),
-              ],
+                  const SizedBox(width: 8),
+                  CircleAvatar(
+                    backgroundColor: primaryColor,
+                    child: IconButton(
+                      icon: const Icon(Icons.send, color: Colors.white),
+                      onPressed: () => _sendMessage(_controller.text),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

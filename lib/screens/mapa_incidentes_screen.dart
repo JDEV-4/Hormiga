@@ -3,7 +3,10 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 
 class MapaIncidentesScreen extends StatefulWidget {
-  const MapaIncidentesScreen({super.key});
+  final Map<String, dynamic>?
+  reporteInicial; // Reporte recibido desde otra pantalla
+
+  const MapaIncidentesScreen({super.key, this.reporteInicial});
 
   @override
   State<MapaIncidentesScreen> createState() => _MapaIncidentesScreenState();
@@ -11,10 +14,8 @@ class MapaIncidentesScreen extends StatefulWidget {
 
 class _MapaIncidentesScreenState extends State<MapaIncidentesScreen> {
   final MapController _mapController = MapController();
-
   static const LatLng _nicaraguaCenter = LatLng(12.1364, -86.2514);
 
-  // Lista de incidentes con datos del usuario que lo reportó
   final List<Map<String, dynamic>> _incidentes = [
     {
       "tipo": "Inundación",
@@ -60,10 +61,12 @@ class _MapaIncidentesScreenState extends State<MapaIncidentesScreen> {
   @override
   void initState() {
     super.initState();
+    if (widget.reporteInicial != null) {
+      _incidentes.add(widget.reporteInicial!);
+    }
     WidgetsBinding.instance.addPostFrameCallback((_) => _ajustarMapa());
   }
 
-  // Ajustar centro y zoom automáticamente según los incidentes visibles
   void _ajustarMapa() {
     if (_incidentesFiltrados.isEmpty) return;
 
@@ -80,8 +83,6 @@ class _MapaIncidentesScreenState extends State<MapaIncidentesScreen> {
     }
 
     LatLng center = LatLng((minLat + maxLat) / 2, (minLng + maxLng) / 2);
-
-    // Ajustar zoom según diferencia lat/lng
     double latDiff = maxLat - minLat;
     double lngDiff = maxLng - minLng;
     double zoom = 10.0;
@@ -127,7 +128,6 @@ class _MapaIncidentesScreenState extends State<MapaIncidentesScreen> {
     }
   }
 
-  // Mostrar información del incidente incluyendo datos del usuario
   void _mostrarInfoIncidente(Map<String, dynamic> incidente) {
     showModalBottomSheet(
       context: context,
@@ -155,17 +155,14 @@ class _MapaIncidentesScreenState extends State<MapaIncidentesScreen> {
               "Reportado por: ${incidente['reportadoPor']}",
               style: const TextStyle(color: Colors.white),
             ),
-            const SizedBox(height: 4),
             Text(
               "Teléfono: ${incidente['telefono']}",
               style: const TextStyle(color: Colors.white),
             ),
-            const SizedBox(height: 2),
             Text(
               "Correo: ${incidente['correo']}",
               style: const TextStyle(color: Colors.white),
             ),
-            const SizedBox(height: 6),
             Text(
               "Ubicación: ${incidente['lat']}, ${incidente['lng']}",
               style: const TextStyle(color: Colors.white),
@@ -196,81 +193,173 @@ class _MapaIncidentesScreenState extends State<MapaIncidentesScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Mapa de Incidentes"),
         backgroundColor: const Color(0xFF1976D2),
-      ),
-      body: Column(
-        children: [
-          // Filtro de categorías con contador
-          Container(
-            color: Colors.grey[200],
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: ["Todos", "Sismo", "Inundación", "Deslave"].map((
-                  categoria,
-                ) {
-                  int cantidad = categoria == "Todos"
-                      ? _incidentes.length
-                      : _incidentes.where((i) => i["tipo"] == categoria).length;
-
-                  bool seleccionado = _categoriaFiltrada == categoria;
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 6),
-                    child: ChoiceChip(
-                      label: Text("$categoria ($cantidad)"),
-                      selected: seleccionado,
-                      onSelected: (_) {
-                        setState(() {
-                          _categoriaFiltrada = categoria;
-                        });
-                        _ajustarMapa();
-                      },
-                    ),
-                  );
-                }).toList(),
-              ),
-            ),
-          ),
-          // Mapa
-          Expanded(
-            child: FlutterMap(
-              mapController: _mapController,
-              options: MapOptions(
-                initialCenter: _nicaraguaCenter,
-                initialZoom: 10,
-                maxZoom: 18,
-                minZoom: 5,
-                onTap: (_, __) {},
-              ),
-              children: [
-                TileLayer(
-                  urlTemplate:
-                      "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                  subdomains: const ['a', 'b', 'c'],
+        elevation: 0,
+        title: Row(
+          children: [
+            const Icon(Icons.map, color: Colors.white, size: 28),
+            const SizedBox(width: 8),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                Text(
+                  "Mapa de Incidentes",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
-                MarkerLayer(
-                  markers: _incidentesFiltrados.map<Marker>((i) {
-                    return Marker(
-                      point: LatLng(i["lat"], i["lng"]),
-                      width: 40,
-                      height: 40,
-                      child: GestureDetector(
-                        onTap: () => _mostrarInfoIncidente(i),
-                        child: Icon(
-                          _iconoPorTipo(i["tipo"]),
-                          color: _colorPorTipo(i["tipo"]),
-                          size: 40,
+                Text(
+                  "Visualización de reportes activos",
+                  style: TextStyle(fontSize: 12, color: Colors.white70),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            //Filtro de categorías con íconos
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.grey[100],
+                borderRadius: BorderRadius.circular(12),
+                boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 4)],
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: ["Todos", "Sismo", "Inundación", "Deslave"].map((
+                    categoria,
+                  ) {
+                    int cantidad = categoria == "Todos"
+                        ? _incidentes.length
+                        : _incidentes
+                              .where((i) => i["tipo"] == categoria)
+                              .length;
+
+                    bool seleccionado = _categoriaFiltrada == categoria;
+                    Color colorIconoTexto = seleccionado
+                        ? Colors.white
+                        : Colors.blueGrey;
+
+                    IconData icono;
+                    switch (categoria) {
+                      case "Sismo":
+                        icono = Icons.warning;
+                        break;
+                      case "Inundación":
+                        icono = Icons.water_drop;
+                        break;
+                      case "Deslave":
+                        icono = Icons.landslide;
+                        break;
+                      default:
+                        icono = Icons.all_inclusive;
+                        break;
+                    }
+
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 6),
+                      child: AnimatedContainer(
+                        duration: const Duration(milliseconds: 300),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: seleccionado
+                                ? _colorPorTipo(categoria)
+                                : Colors.transparent,
+                            width: 2,
+                          ),
+                        ),
+                        child: ChoiceChip(
+                          avatar: Icon(icono, color: colorIconoTexto),
+                          label: Text(
+                            "$categoria ($cantidad)",
+                            style: TextStyle(
+                              color: colorIconoTexto,
+                              fontWeight: seleccionado
+                                  ? FontWeight.bold
+                                  : FontWeight.normal,
+                            ),
+                          ),
+                          selected: seleccionado,
+                          selectedColor: _colorPorTipo(categoria),
+                          onSelected: (_) {
+                            setState(() {
+                              _categoriaFiltrada = categoria;
+                            });
+                            _ajustarMapa();
+                          },
                         ),
                       ),
                     );
                   }).toList(),
                 ),
-              ],
+              ),
             ),
-          ),
-        ],
+            const SizedBox(height: 16),
+
+            // Mapa estilizado
+            Expanded(
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 400),
+                curve: Curves.easeOut,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(color: Colors.blueGrey.shade100),
+                  boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 6)],
+                ),
+                clipBehavior: Clip.antiAlias,
+                child: FlutterMap(
+                  mapController: _mapController,
+                  options: MapOptions(
+                    initialCenter: _nicaraguaCenter,
+                    initialZoom: 10,
+                    maxZoom: 18,
+                    minZoom: 5,
+                  ),
+                  children: [
+                    TileLayer(
+                      urlTemplate:
+                          "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                      subdomains: const ['a', 'b', 'c'],
+                    ),
+                    MarkerLayer(
+                      markers: _incidentesFiltrados.map<Marker>((i) {
+                        return Marker(
+                          point: LatLng(i["lat"], i["lng"]),
+                          width: 40,
+                          height: 40,
+                          child: GestureDetector(
+                            onTap: () => _mostrarInfoIncidente(i),
+                            child: Icon(
+                              _iconoPorTipo(i["tipo"]),
+                              color: _colorPorTipo(i["tipo"]),
+                              size: 40,
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+
+      // Botón flotante para centrar el mapa
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color(0xFF1976D2),
+        onPressed: () => _mapController.move(_nicaraguaCenter, 10),
+        child: const Icon(Icons.my_location, color: Colors.white),
       ),
     );
   }

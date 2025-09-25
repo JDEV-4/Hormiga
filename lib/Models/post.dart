@@ -5,8 +5,8 @@ class Post {
   final String image;
   final int likes;
   final int comments;
-  final String type; // "official", "municipality", "citizen"
-  final String avatarUrl; // 🔹 agregar
+  final String type;
+  final String avatarUrl;
 
   Post({
     required this.author,
@@ -16,6 +16,6 @@ class Post {
     required this.likes,
     required this.comments,
     required this.type,
-    required this.avatarUrl, // 🔹 obligatorio
+    required this.avatarUrl,
   });
 }
