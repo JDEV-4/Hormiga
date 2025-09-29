@@ -1,6 +1,6 @@
 # A24 — Aplicación Hackathon Disruptivo Nicaragua 2025 (Equipo JEDIK)
 
-**Propósito (breve)**
+**Propósito**
 A24 es una aplicación desarrollada con **Flutter (Dart)** para el Hackathon Disruptivo Nicaragua 2025. Su objetivo es ofrecer una herramienta educativa y de alerta ciudadana ante amenazas (inundaciones, deslaves, derrumbes, etc.), con georreferenciación de reportes, mapa interactivo y un chatbot educativo llamado **“La Hormiga”**.
 
 > En la rama `Javier` se encuentra la parte del desarollo de Flutter.
