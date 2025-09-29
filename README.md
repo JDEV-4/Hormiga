@@ -107,44 +107,18 @@ flutter build apk --release
 ```
 
 
-## Estructura común (sugerida)
+## Estructura común
 
 ```
 /lib
-  /controllers
   /models
   /services
-  /views
-  /db
+  /widgets
+  /screens
+  /utils
   main.dart
 /assets
-pubspec.yaml
 ```
-
----
-
-## Assets
-
-* Coloca imágenes en `assets/images/`.
-* En `pubspec.yaml` declara:
-
-```yaml
-flutter:
-  assets:
-    - assets/images/
-```
-* Usa en código:
-```dart
-Image.asset('assets/images/logo.png')
-```
-
----
-
-## Errores comunes y soluciones rápidas
-
-* **404 en imágenes:** revisa la ruta en `Image.asset` y la sección `assets:` en `pubspec.yaml`; luego `flutter clean` + `flutter pub get`.
-* **No se conecta a API (si decides usar una):** para emulador Android usa `10.0.2.2` en lugar de `localhost`.
-
 
 
 ## Licencia y créditos
