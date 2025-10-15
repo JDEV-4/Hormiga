@@ -24,6 +24,7 @@ builder.Services.AddScoped<IContenidoEducativoService, ContenidoEducativoService
 
 builder.Services.AddScoped<IPublicacionService, PublicacionService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<IResultadoUsuarioQuizService, ResultadoUsuarioQuizService>();
 
 builder.Services.AddScoped<IQuizService, QuizService>();
 builder.Services.AddScoped<IPreguntaQuizService, PreguntaQuizService>();

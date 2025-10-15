@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Isaias\\Downloads\\Proyecto\\Proyecto\\Convocatoria_Angelo\\ProjectIV-main\\Services\\Implementation\\Implementation.csproj": {}
+    "C:\\Users\\Isaias\\Documents\\hackaton 2025\\Backend-Hormiga\\Services\\Implementation\\Implementation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Isaias\\Downloads\\Proyecto\\Proyecto\\Convocatoria_Angelo\\ProjectIV-main\\Services\\Implementation\\Implementation.csproj": {
+    "C:\\Users\\Isaias\\Documents\\hackaton 2025\\Backend-Hormiga\\Services\\Implementation\\Implementation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Isaias\\Downloads\\Proyecto\\Proyecto\\Convocatoria_Angelo\\ProjectIV-main\\Services\\Implementation\\Implementation.csproj",
+        "projectUniqueName": "C:\\Users\\Isaias\\Documents\\hackaton 2025\\Backend-Hormiga\\Services\\Implementation\\Implementation.csproj",
         "projectName": "Implementation",
-        "projectPath": "C:\\Users\\Isaias\\Downloads\\Proyecto\\Proyecto\\Convocatoria_Angelo\\ProjectIV-main\\Services\\Implementation\\Implementation.csproj",
+        "projectPath": "C:\\Users\\Isaias\\Documents\\hackaton 2025\\Backend-Hormiga\\Services\\Implementation\\Implementation.csproj",
         "packagesPath": "C:\\Users\\Isaias\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Isaias\\Downloads\\Proyecto\\Proyecto\\Convocatoria_Angelo\\ProjectIV-main\\Services\\Implementation\\obj\\",
+        "outputPath": "C:\\Users\\Isaias\\Documents\\hackaton 2025\\Backend-Hormiga\\Services\\Implementation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Isaias\\Downloads\\Proyecto\\Proyecto\\Convocatoria_Angelo\\ProjectIV-main\\Services\\Interface\\Interface.csproj": {
-                "projectPath": "C:\\Users\\Isaias\\Downloads\\Proyecto\\Proyecto\\Convocatoria_Angelo\\ProjectIV-main\\Services\\Interface\\Interface.csproj"
+              "C:\\Users\\Isaias\\Documents\\hackaton 2025\\Backend-Hormiga\\Services\\Interface\\Interface.csproj": {
+                "projectPath": "C:\\Users\\Isaias\\Documents\\hackaton 2025\\Backend-Hormiga\\Services\\Interface\\Interface.csproj"
               }
             }
           }
@@ -96,14 +96,14 @@
         }
       }
     },
-    "C:\\Users\\Isaias\\Downloads\\Proyecto\\Proyecto\\Convocatoria_Angelo\\ProjectIV-main\\Services\\Interface\\Interface.csproj": {
+    "C:\\Users\\Isaias\\Documents\\hackaton 2025\\Backend-Hormiga\\Services\\Interface\\Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Isaias\\Downloads\\Proyecto\\Proyecto\\Convocatoria_Angelo\\ProjectIV-main\\Services\\Interface\\Interface.csproj",
+        "projectUniqueName": "C:\\Users\\Isaias\\Documents\\hackaton 2025\\Backend-Hormiga\\Services\\Interface\\Interface.csproj",
         "projectName": "Interface",
-        "projectPath": "C:\\Users\\Isaias\\Downloads\\Proyecto\\Proyecto\\Convocatoria_Angelo\\ProjectIV-main\\Services\\Interface\\Interface.csproj",
+        "projectPath": "C:\\Users\\Isaias\\Documents\\hackaton 2025\\Backend-Hormiga\\Services\\Interface\\Interface.csproj",
         "packagesPath": "C:\\Users\\Isaias\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Isaias\\Downloads\\Proyecto\\Proyecto\\Convocatoria_Angelo\\ProjectIV-main\\Services\\Interface\\obj\\",
+        "outputPath": "C:\\Users\\Isaias\\Documents\\hackaton 2025\\Backend-Hormiga\\Services\\Interface\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -125,8 +125,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Isaias\\Downloads\\Proyecto\\Proyecto\\Convocatoria_Angelo\\ProjectIV-main\\WebApi.Model\\WebApi.Model.csproj": {
-                "projectPath": "C:\\Users\\Isaias\\Downloads\\Proyecto\\Proyecto\\Convocatoria_Angelo\\ProjectIV-main\\WebApi.Model\\WebApi.Model.csproj"
+              "C:\\Users\\Isaias\\Documents\\hackaton 2025\\Backend-Hormiga\\WebApi.Model\\WebApi.Model.csproj": {
+                "projectPath": "C:\\Users\\Isaias\\Documents\\hackaton 2025\\Backend-Hormiga\\WebApi.Model\\WebApi.Model.csproj"
               }
             }
           }
@@ -166,14 +166,14 @@
         }
       }
     },
-    "C:\\Users\\Isaias\\Downloads\\Proyecto\\Proyecto\\Convocatoria_Angelo\\ProjectIV-main\\WebApi.Model\\WebApi.Model.csproj": {
+    "C:\\Users\\Isaias\\Documents\\hackaton 2025\\Backend-Hormiga\\WebApi.Model\\WebApi.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Isaias\\Downloads\\Proyecto\\Proyecto\\Convocatoria_Angelo\\ProjectIV-main\\WebApi.Model\\WebApi.Model.csproj",
+        "projectUniqueName": "C:\\Users\\Isaias\\Documents\\hackaton 2025\\Backend-Hormiga\\WebApi.Model\\WebApi.Model.csproj",
         "projectName": "WebApi.Model",
-        "projectPath": "C:\\Users\\Isaias\\Downloads\\Proyecto\\Proyecto\\Convocatoria_Angelo\\ProjectIV-main\\WebApi.Model\\WebApi.Model.csproj",
+        "projectPath": "C:\\Users\\Isaias\\Documents\\hackaton 2025\\Backend-Hormiga\\WebApi.Model\\WebApi.Model.csproj",
         "packagesPath": "C:\\Users\\Isaias\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Isaias\\Downloads\\Proyecto\\Proyecto\\Convocatoria_Angelo\\ProjectIV-main\\WebApi.Model\\obj\\",
+        "outputPath": "C:\\Users\\Isaias\\Documents\\hackaton 2025\\Backend-Hormiga\\WebApi.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

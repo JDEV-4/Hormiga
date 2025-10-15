@@ -223,3 +223,19 @@ C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\S
 C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Interface\obj\Debug\net8.0\refint\Interface.dll
 C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Interface\obj\Debug\net8.0\Interface.pdb
 C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Interface\obj\Debug\net8.0\ref\Interface.dll
+C:\Users\Isaias\Documents\hackaton 2025\Backend-Hormiga\Services\Interface\bin\Debug\net8.0\Interface.deps.json
+C:\Users\Isaias\Documents\hackaton 2025\Backend-Hormiga\Services\Interface\bin\Debug\net8.0\Interface.dll
+C:\Users\Isaias\Documents\hackaton 2025\Backend-Hormiga\Services\Interface\bin\Debug\net8.0\Interface.pdb
+C:\Users\Isaias\Documents\hackaton 2025\Backend-Hormiga\Services\Interface\bin\Debug\net8.0\WebApi.Model.dll
+C:\Users\Isaias\Documents\hackaton 2025\Backend-Hormiga\Services\Interface\bin\Debug\net8.0\WebApi.Model.pdb
+C:\Users\Isaias\Documents\hackaton 2025\Backend-Hormiga\Services\Interface\obj\Debug\net8.0\Interface.csproj.AssemblyReference.cache
+C:\Users\Isaias\Documents\hackaton 2025\Backend-Hormiga\Services\Interface\obj\Debug\net8.0\Interface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Isaias\Documents\hackaton 2025\Backend-Hormiga\Services\Interface\obj\Debug\net8.0\Interface.AssemblyInfoInputs.cache
+C:\Users\Isaias\Documents\hackaton 2025\Backend-Hormiga\Services\Interface\obj\Debug\net8.0\Interface.AssemblyInfo.cs
+C:\Users\Isaias\Documents\hackaton 2025\Backend-Hormiga\Services\Interface\obj\Debug\net8.0\Interface.csproj.CoreCompileInputs.cache
+C:\Users\Isaias\Documents\hackaton 2025\Backend-Hormiga\Services\Interface\obj\Debug\net8.0\Interface.sourcelink.json
+C:\Users\Isaias\Documents\hackaton 2025\Backend-Hormiga\Services\Interface\obj\Debug\net8.0\Interface.csproj.Up2Date
+C:\Users\Isaias\Documents\hackaton 2025\Backend-Hormiga\Services\Interface\obj\Debug\net8.0\Interface.dll
+C:\Users\Isaias\Documents\hackaton 2025\Backend-Hormiga\Services\Interface\obj\Debug\net8.0\refint\Interface.dll
+C:\Users\Isaias\Documents\hackaton 2025\Backend-Hormiga\Services\Interface\obj\Debug\net8.0\Interface.pdb
+C:\Users\Isaias\Documents\hackaton 2025\Backend-Hormiga\Services\Interface\obj\Debug\net8.0\ref\Interface.dll
