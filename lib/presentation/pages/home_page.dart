@@ -3,7 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import '../controllers/home_controller.dart';
 import '../widgets/organisms/post_card.dart';
-import 'create_post_page.dart'; 
+import 'create_post_page.dart';
+import 'report_incident_page.dart'; 
+import 'mapa_incidentes_page.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -125,7 +128,8 @@ class _HomePageState extends State<HomePage> {
           // Perfil
           Container(
             width: double.infinity,
-            padding: const EdgeInsets.only(top: 40, bottom: 20, left: 16, right: 16),
+            padding:
+                const EdgeInsets.only(top: 40, bottom: 20, left: 16, right: 16),
             color: const Color(0xFF006D65),
             child: Row(
               children: [
@@ -164,32 +168,56 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.zero,
               children: [
                 const SizedBox(height: 8),
-                _buildMenuItem(Icons.report, 'Reportar Incidente', Colors.red, () {}),
-                _buildMenuItem(Icons.map, 'Mapa de Incidentes', Colors.green, () {}),
-                _buildMenuItem(Icons.school, 'Módulo Educativo', Colors.blue, () {}),
+
+                // ✅ Navegación a ReportIncidentPage
+                _buildMenuItem(Icons.report, 'Reportar Incidente', Colors.red,
+                    () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (_) => const ReportIncidentPage()),
+                  );
+                }),
+
+                _buildMenuItem(Icons.map, 'Mapa de Incidentes', Colors.green, () {
+                 Navigator.push(
+                 context,
+                   MaterialPageRoute(builder: (_) => const MapaIncidentesPage()),
+                  );
+                }),
+
+                _buildMenuItem(
+                    Icons.school, 'Módulo Educativo', Colors.blue, () {}),
                 const Divider(),
-                _buildMenuItem(Icons.groups, 'Comunidad', Colors.orange, () {}),
-                _buildMenuItem(Icons.chat_bubble, 'Chatbot de la Hormiga', Colors.teal, () {}),
+                _buildMenuItem(
+                    Icons.groups, 'Comunidad', Colors.orange, () {}),
+                _buildMenuItem(Icons.chat_bubble, 'Chatbot de la Hormiga',
+                    Colors.teal, () {}),
                 const Divider(),
-                _buildMenuItem(Icons.bar_chart, 'Estadísticas', Colors.purple, () {}),
-                _buildMenuItem(Icons.settings, 'Configuración', Colors.grey, () {}),
+                _buildMenuItem(
+                    Icons.bar_chart, 'Estadísticas', Colors.purple, () {}),
+                _buildMenuItem(
+                    Icons.settings, 'Configuración', Colors.grey, () {}),
               ],
             ),
           ),
 
           const Divider(),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12),
             child: ElevatedButton.icon(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.redAccent,
                 minimumSize: const Size.fromHeight(45),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8)),
               ),
               icon: const Icon(Icons.logout, color: Colors.white),
               label: const Text(
                 'Cerrar sesión',
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.bold),
               ),
               onPressed: () {
                 Navigator.pop(context);
@@ -201,7 +229,8 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget _buildMenuItem(IconData icon, String title, Color color, VoidCallback onTap) {
+  Widget _buildMenuItem(
+      IconData icon, String title, Color color, VoidCallback onTap) {
     return ListTile(
       leading: CircleAvatar(
         backgroundColor: color.withAlpha(40),
