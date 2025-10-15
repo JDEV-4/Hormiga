@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:geocoding/geocoding.dart';
 import 'mapa_incidentes_page.dart';
 
 class ReportIncidentPage extends StatefulWidget {
@@ -28,12 +29,14 @@ class _ReportIncidentPageState extends State<ReportIncidentPage> {
   File? _selectedImage;
   bool _showImageError = false;
   LatLng? _currentPosition;
+  String _departamento = 'Desconocido';
+  String _municipio = 'Desconocido';
+  String _comunidad = 'Desconocido';
 
   Future<void> _pickImage() async {
     final ImagePicker picker = ImagePicker();
-
     final XFile? pickedFile = await picker.pickImage(
-      source: ImageSource.gallery, // O usa ImageSource.camera para la cámara
+      source: ImageSource.gallery,
       imageQuality: 70,
     );
 
@@ -45,12 +48,9 @@ class _ReportIncidentPageState extends State<ReportIncidentPage> {
     }
   }
 
+  // Obtener ubicación precisa y nombres de lugar
   Future<void> _getCurrentLocation() async {
-    bool serviceEnabled;
-    LocationPermission permission;
-
-    // Verificar si el servicio de ubicación está habilitado
-    serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
@@ -61,13 +61,10 @@ class _ReportIncidentPageState extends State<ReportIncidentPage> {
       return;
     }
 
-    // Verificar permisos
-    permission = await Geolocator.checkPermission();
+    LocationPermission permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
-      if (permission == LocationPermission.denied) {
-        return;
-      }
+      if (permission == LocationPermission.denied) return;
     }
 
     if (permission == LocationPermission.deniedForever) {
@@ -80,13 +77,39 @@ class _ReportIncidentPageState extends State<ReportIncidentPage> {
       return;
     }
 
-    // Obtener ubicación actual
-    final Position position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high);
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) => const Center(child: CircularProgressIndicator()),
+    );
 
-    setState(() {
+    try {
+      // Obtener ubicación GPS exacta
+      Position position = await Geolocator.getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.bestForNavigation);
+
       _currentPosition = LatLng(position.latitude, position.longitude);
-    });
+
+      // Geocoding inverso para obtener Departamento, Municipio y Comunidad
+      List<Placemark> placemarks =
+          await placemarkFromCoordinates(position.latitude, position.longitude);
+
+      if (placemarks.isNotEmpty) {
+        Placemark place = placemarks.first;
+        _departamento = place.administrativeArea ?? 'Desconocido';
+        _municipio = place.subAdministrativeArea ?? 'Desconocido';
+        _comunidad = place.subLocality ?? place.locality ?? 'Desconocido';
+      }
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Error al obtener ubicación: $e'),
+          backgroundColor: Colors.red,
+        ),
+      );
+    } finally {
+      Navigator.of(context).pop();
+    }
   }
 
   void _submitReport() async {
@@ -108,6 +131,9 @@ class _ReportIncidentPageState extends State<ReportIncidentPage> {
       'descripcion': _descriptionController.text,
       'imagen': _selectedImage,
       'ubicacion': _currentPosition!,
+      'departamento': _departamento,
+      'municipio': _municipio,
+      'comunidad': _comunidad,
     };
 
     showDialog(
@@ -155,11 +181,13 @@ class _ReportIncidentPageState extends State<ReportIncidentPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('Tipo de incidente', style: TextStyle(fontWeight: FontWeight.w600)),
+              const Text('Tipo de incidente',
+                  style: TextStyle(fontWeight: FontWeight.w600)),
               const SizedBox(height: 6),
               DropdownButtonFormField<String>(
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                  border:
+                      OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                 ),
                 hint: const Text('Selecciona un tipo'),
                 items: _incidentTypes.map((type) {
@@ -173,22 +201,23 @@ class _ReportIncidentPageState extends State<ReportIncidentPage> {
                     value == null ? 'Selecciona un tipo de incidente' : null,
               ),
               const SizedBox(height: 16),
-
-              const Text('Descripción', style: TextStyle(fontWeight: FontWeight.w600)),
+              const Text('Descripción',
+                  style: TextStyle(fontWeight: FontWeight.w600)),
               const SizedBox(height: 6),
               TextFormField(
                 controller: _descriptionController,
                 maxLines: 5,
                 decoration: InputDecoration(
-                  hintText: 'Describe brevemente lo ocurrido y la ubicación.',
-                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                  hintText: 'Describe brevemente lo ocurrido.',
+                  border:
+                      OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                 ),
                 validator: (value) =>
                     value == null || value.isEmpty ? 'Campo requerido' : null,
               ),
               const SizedBox(height: 16),
-
-              const Text('Imagen del incidente', style: TextStyle(fontWeight: FontWeight.w600)),
+              const Text('Imagen del incidente',
+                  style: TextStyle(fontWeight: FontWeight.w600)),
               const SizedBox(height: 6),
               GestureDetector(
                 onTap: _pickImage,
@@ -206,11 +235,11 @@ class _ReportIncidentPageState extends State<ReportIncidentPage> {
                   child: _selectedImage != null
                       ? Image.file(_selectedImage!, fit: BoxFit.cover)
                       : const Center(
-                          child: Icon(Icons.add_a_photo, size: 40, color: Colors.grey),
+                          child: Icon(Icons.add_a_photo,
+                              size: 40, color: Colors.grey),
                         ),
                 ),
               ),
-
               if (_showImageError)
                 const Padding(
                   padding: EdgeInsets.only(top: 8),
@@ -220,18 +249,19 @@ class _ReportIncidentPageState extends State<ReportIncidentPage> {
                   ),
                 ),
               const SizedBox(height: 24),
-
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF006D65),
                     minimumSize: const Size.fromHeight(50),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
                   ),
                   icon: const Icon(Icons.send, color: Colors.white),
                   label: const Text('Enviar reporte',
-                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold)),
                   onPressed: _submitReport,
                 ),
               ),
