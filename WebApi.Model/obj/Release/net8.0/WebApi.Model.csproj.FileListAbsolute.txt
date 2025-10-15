@@ -1,0 +1,11 @@
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\WebApi.Model\bin\Release\net8.0\WebApi.Model.deps.json
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\WebApi.Model\bin\Release\net8.0\WebApi.Model.dll
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\WebApi.Model\bin\Release\net8.0\WebApi.Model.pdb
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\WebApi.Model\obj\Release\net8.0\WebApi.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\WebApi.Model\obj\Release\net8.0\WebApi.Model.AssemblyInfoInputs.cache
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\WebApi.Model\obj\Release\net8.0\WebApi.Model.AssemblyInfo.cs
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\WebApi.Model\obj\Release\net8.0\WebApi.Model.csproj.CoreCompileInputs.cache
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\WebApi.Model\obj\Release\net8.0\WebApi.Model.dll
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\WebApi.Model\obj\Release\net8.0\refint\WebApi.Model.dll
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\WebApi.Model\obj\Release\net8.0\WebApi.Model.pdb
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\WebApi.Model\obj\Release\net8.0\ref\WebApi.Model.dll

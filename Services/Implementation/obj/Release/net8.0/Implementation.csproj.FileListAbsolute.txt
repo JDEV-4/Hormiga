@@ -1,0 +1,17 @@
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Release\net8.0\Implementation.deps.json
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Release\net8.0\Implementation.dll
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Release\net8.0\Implementation.pdb
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Release\net8.0\Interface.dll
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Release\net8.0\WebApi.Model.dll
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Release\net8.0\Interface.pdb
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Release\net8.0\WebApi.Model.pdb
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Release\net8.0\Implementation.csproj.AssemblyReference.cache
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Release\net8.0\Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Release\net8.0\Implementation.AssemblyInfoInputs.cache
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Release\net8.0\Implementation.AssemblyInfo.cs
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Release\net8.0\Implementation.csproj.CoreCompileInputs.cache
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Release\net8.0\Implemen.3739F620.Up2Date
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Release\net8.0\Implementation.dll
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Release\net8.0\refint\Implementation.dll
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Release\net8.0\Implementation.pdb
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Release\net8.0\ref\Implementation.dll

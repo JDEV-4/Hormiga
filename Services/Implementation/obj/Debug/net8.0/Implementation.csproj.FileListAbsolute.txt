@@ -1,0 +1,255 @@
+C:\Users\Isaias\Documents\integrador n2024\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.deps.json
+C:\Users\Isaias\Documents\integrador n2024\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.dll
+C:\Users\Isaias\Documents\integrador n2024\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.pdb
+C:\Users\Isaias\Documents\integrador n2024\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.dll
+C:\Users\Isaias\Documents\integrador n2024\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.dll
+C:\Users\Isaias\Documents\integrador n2024\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.pdb
+C:\Users\Isaias\Documents\integrador n2024\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.pdb
+C:\Users\Isaias\Documents\integrador n2024\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.AssemblyReference.cache
+C:\Users\Isaias\Documents\integrador n2024\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Isaias\Documents\integrador n2024\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfoInputs.cache
+C:\Users\Isaias\Documents\integrador n2024\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfo.cs
+C:\Users\Isaias\Documents\integrador n2024\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.CoreCompileInputs.cache
+C:\Users\Isaias\Documents\integrador n2024\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implemen.3739F620.Up2Date
+C:\Users\Isaias\Documents\integrador n2024\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.dll
+C:\Users\Isaias\Documents\integrador n2024\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\refint\Implementation.dll
+C:\Users\Isaias\Documents\integrador n2024\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.pdb
+C:\Users\Isaias\Documents\integrador n2024\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\ref\Implementation.dll
+C:\Users\Gonzalo\Desktop\Proyecto CSC\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.deps.json
+C:\Users\Gonzalo\Desktop\Proyecto CSC\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.dll
+C:\Users\Gonzalo\Desktop\Proyecto CSC\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.pdb
+C:\Users\Gonzalo\Desktop\Proyecto CSC\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.dll
+C:\Users\Gonzalo\Desktop\Proyecto CSC\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.dll
+C:\Users\Gonzalo\Desktop\Proyecto CSC\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.pdb
+C:\Users\Gonzalo\Desktop\Proyecto CSC\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.pdb
+C:\Users\Gonzalo\Desktop\Proyecto CSC\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.AssemblyReference.cache
+C:\Users\Gonzalo\Desktop\Proyecto CSC\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gonzalo\Desktop\Proyecto CSC\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfoInputs.cache
+C:\Users\Gonzalo\Desktop\Proyecto CSC\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfo.cs
+C:\Users\Gonzalo\Desktop\Proyecto CSC\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.CoreCompileInputs.cache
+C:\Users\Gonzalo\Desktop\Proyecto CSC\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implemen.3739F620.Up2Date
+C:\Users\Gonzalo\Desktop\Proyecto CSC\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.dll
+C:\Users\Gonzalo\Desktop\Proyecto CSC\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\refint\Implementation.dll
+C:\Users\Gonzalo\Desktop\Proyecto CSC\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.pdb
+C:\Users\Gonzalo\Desktop\Proyecto CSC\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\ref\Implementation.dll
+C:\Users\Gonzalo\Desktop\Grupo_6\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.deps.json
+C:\Users\Gonzalo\Desktop\Grupo_6\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.dll
+C:\Users\Gonzalo\Desktop\Grupo_6\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.pdb
+C:\Users\Gonzalo\Desktop\Grupo_6\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.dll
+C:\Users\Gonzalo\Desktop\Grupo_6\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.dll
+C:\Users\Gonzalo\Desktop\Grupo_6\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.pdb
+C:\Users\Gonzalo\Desktop\Grupo_6\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.pdb
+C:\Users\Gonzalo\Desktop\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.AssemblyReference.cache
+C:\Users\Gonzalo\Desktop\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gonzalo\Desktop\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfoInputs.cache
+C:\Users\Gonzalo\Desktop\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfo.cs
+C:\Users\Gonzalo\Desktop\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.CoreCompileInputs.cache
+C:\Users\Gonzalo\Desktop\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implemen.3739F620.Up2Date
+C:\Users\Gonzalo\Desktop\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.dll
+C:\Users\Gonzalo\Desktop\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\refint\Implementation.dll
+C:\Users\Gonzalo\Desktop\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.pdb
+C:\Users\Gonzalo\Desktop\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\ref\Implementation.dll
+C:\Users\Isaias\Documents\integrador n2024\Grupo_6.aaazip\Grupo_6\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.deps.json
+C:\Users\Isaias\Documents\integrador n2024\Grupo_6.aaazip\Grupo_6\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.dll
+C:\Users\Isaias\Documents\integrador n2024\Grupo_6.aaazip\Grupo_6\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.pdb
+C:\Users\Isaias\Documents\integrador n2024\Grupo_6.aaazip\Grupo_6\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.dll
+C:\Users\Isaias\Documents\integrador n2024\Grupo_6.aaazip\Grupo_6\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.dll
+C:\Users\Isaias\Documents\integrador n2024\Grupo_6.aaazip\Grupo_6\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.pdb
+C:\Users\Isaias\Documents\integrador n2024\Grupo_6.aaazip\Grupo_6\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.pdb
+C:\Users\Isaias\Documents\integrador n2024\Grupo_6.aaazip\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.AssemblyReference.cache
+C:\Users\Isaias\Documents\integrador n2024\Grupo_6.aaazip\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Isaias\Documents\integrador n2024\Grupo_6.aaazip\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfoInputs.cache
+C:\Users\Isaias\Documents\integrador n2024\Grupo_6.aaazip\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfo.cs
+C:\Users\Isaias\Documents\integrador n2024\Grupo_6.aaazip\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.CoreCompileInputs.cache
+C:\Users\Isaias\Documents\integrador n2024\Grupo_6.aaazip\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implemen.3739F620.Up2Date
+C:\Users\Isaias\Documents\integrador n2024\Grupo_6.aaazip\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.dll
+C:\Users\Isaias\Documents\integrador n2024\Grupo_6.aaazip\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\refint\Implementation.dll
+C:\Users\Isaias\Documents\integrador n2024\Grupo_6.aaazip\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.pdb
+C:\Users\Isaias\Documents\integrador n2024\Grupo_6.aaazip\Grupo_6\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\ref\Implementation.dll
+C:\Users\JuanLópez\Downloads\hoy\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.deps.json
+C:\Users\JuanLópez\Downloads\hoy\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.dll
+C:\Users\JuanLópez\Downloads\hoy\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.pdb
+C:\Users\JuanLópez\Downloads\hoy\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.dll
+C:\Users\JuanLópez\Downloads\hoy\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.dll
+C:\Users\JuanLópez\Downloads\hoy\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.pdb
+C:\Users\JuanLópez\Downloads\hoy\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.pdb
+C:\Users\JuanLópez\Downloads\hoy\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.AssemblyReference.cache
+C:\Users\JuanLópez\Downloads\hoy\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JuanLópez\Downloads\hoy\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfoInputs.cache
+C:\Users\JuanLópez\Downloads\hoy\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfo.cs
+C:\Users\JuanLópez\Downloads\hoy\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.CoreCompileInputs.cache
+C:\Users\JuanLópez\Downloads\hoy\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implemen.3739F620.Up2Date
+C:\Users\JuanLópez\Downloads\hoy\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.dll
+C:\Users\JuanLópez\Downloads\hoy\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\refint\Implementation.dll
+C:\Users\JuanLópez\Downloads\hoy\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.pdb
+C:\Users\JuanLópez\Downloads\hoy\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\ref\Implementation.dll
+C:\Users\angel\OneDrive\Desktop\ultima_version\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.deps.json
+C:\Users\angel\OneDrive\Desktop\ultima_version\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.dll
+C:\Users\angel\OneDrive\Desktop\ultima_version\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.pdb
+C:\Users\angel\OneDrive\Desktop\ultima_version\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.dll
+C:\Users\angel\OneDrive\Desktop\ultima_version\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.dll
+C:\Users\angel\OneDrive\Desktop\ultima_version\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.pdb
+C:\Users\angel\OneDrive\Desktop\ultima_version\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.pdb
+C:\Users\angel\OneDrive\Desktop\ultima_version\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.AssemblyReference.cache
+C:\Users\angel\OneDrive\Desktop\ultima_version\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\angel\OneDrive\Desktop\ultima_version\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfoInputs.cache
+C:\Users\angel\OneDrive\Desktop\ultima_version\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfo.cs
+C:\Users\angel\OneDrive\Desktop\ultima_version\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.CoreCompileInputs.cache
+C:\Users\angel\OneDrive\Desktop\ultima_version\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implemen.3739F620.Up2Date
+C:\Users\angel\OneDrive\Desktop\ultima_version\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.dll
+C:\Users\angel\OneDrive\Desktop\ultima_version\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\refint\Implementation.dll
+C:\Users\angel\OneDrive\Desktop\ultima_version\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.pdb
+C:\Users\angel\OneDrive\Desktop\ultima_version\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\ref\Implementation.dll
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.deps.json
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.dll
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.pdb
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.dll
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.dll
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.pdb
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.pdb
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.AssemblyReference.cache
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfoInputs.cache
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfo.cs
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.CoreCompileInputs.cache
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implemen.3739F620.Up2Date
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.dll
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\refint\Implementation.dll
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.pdb
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\ref\Implementation.dll
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.deps.json
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.dll
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.pdb
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.dll
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.dll
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.pdb
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.pdb
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.AssemblyReference.cache
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfoInputs.cache
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfo.cs
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.CoreCompileInputs.cache
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implemen.3739F620.Up2Date
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.dll
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\refint\Implementation.dll
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.pdb
+C:\Users\angel\OneDrive\Desktop\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\ref\Implementation.dll
+C:\Users\Gonzalo\Desktop\ANGELO\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.deps.json
+C:\Users\Gonzalo\Desktop\ANGELO\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.dll
+C:\Users\Gonzalo\Desktop\ANGELO\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.pdb
+C:\Users\Gonzalo\Desktop\ANGELO\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.dll
+C:\Users\Gonzalo\Desktop\ANGELO\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.dll
+C:\Users\Gonzalo\Desktop\ANGELO\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.pdb
+C:\Users\Gonzalo\Desktop\ANGELO\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.pdb
+C:\Users\Gonzalo\Desktop\ANGELO\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.AssemblyReference.cache
+C:\Users\Gonzalo\Desktop\ANGELO\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gonzalo\Desktop\ANGELO\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfoInputs.cache
+C:\Users\Gonzalo\Desktop\ANGELO\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfo.cs
+C:\Users\Gonzalo\Desktop\ANGELO\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.CoreCompileInputs.cache
+C:\Users\Gonzalo\Desktop\ANGELO\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implemen.3739F620.Up2Date
+C:\Users\Gonzalo\Desktop\ANGELO\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.dll
+C:\Users\Gonzalo\Desktop\ANGELO\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\refint\Implementation.dll
+C:\Users\Gonzalo\Desktop\ANGELO\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.pdb
+C:\Users\Gonzalo\Desktop\ANGELO\proyecto con inventario y detalleProducto\ProjectIV-main\ProjectIV-main\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\ref\Implementation.dll
+C:\Users\Gonzalo\Desktop\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.deps.json
+C:\Users\Gonzalo\Desktop\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.dll
+C:\Users\Gonzalo\Desktop\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.pdb
+C:\Users\Gonzalo\Desktop\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.dll
+C:\Users\Gonzalo\Desktop\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.dll
+C:\Users\Gonzalo\Desktop\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.pdb
+C:\Users\Gonzalo\Desktop\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.pdb
+C:\Users\Gonzalo\Desktop\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.AssemblyReference.cache
+C:\Users\Gonzalo\Desktop\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gonzalo\Desktop\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfoInputs.cache
+C:\Users\Gonzalo\Desktop\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfo.cs
+C:\Users\Gonzalo\Desktop\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.CoreCompileInputs.cache
+C:\Users\Gonzalo\Desktop\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implemen.3739F620.Up2Date
+C:\Users\Gonzalo\Desktop\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.dll
+C:\Users\Gonzalo\Desktop\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\refint\Implementation.dll
+C:\Users\Gonzalo\Desktop\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.pdb
+C:\Users\Gonzalo\Desktop\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\ref\Implementation.dll
+C:\Users\Gonzalo\Desktop\Convocatoria\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.deps.json
+C:\Users\Gonzalo\Desktop\Convocatoria\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.dll
+C:\Users\Gonzalo\Desktop\Convocatoria\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.pdb
+C:\Users\Gonzalo\Desktop\Convocatoria\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.dll
+C:\Users\Gonzalo\Desktop\Convocatoria\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.dll
+C:\Users\Gonzalo\Desktop\Convocatoria\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.pdb
+C:\Users\Gonzalo\Desktop\Convocatoria\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.pdb
+C:\Users\Gonzalo\Desktop\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.AssemblyReference.cache
+C:\Users\Gonzalo\Desktop\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gonzalo\Desktop\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfoInputs.cache
+C:\Users\Gonzalo\Desktop\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfo.cs
+C:\Users\Gonzalo\Desktop\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.CoreCompileInputs.cache
+C:\Users\Gonzalo\Desktop\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implemen.3739F620.Up2Date
+C:\Users\Gonzalo\Desktop\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.dll
+C:\Users\Gonzalo\Desktop\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\refint\Implementation.dll
+C:\Users\Gonzalo\Desktop\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.pdb
+C:\Users\Gonzalo\Desktop\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\ref\Implementation.dll
+C:\Users\angel\Downloads\Convocatoria\Convocatoria\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.deps.json
+C:\Users\angel\Downloads\Convocatoria\Convocatoria\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.dll
+C:\Users\angel\Downloads\Convocatoria\Convocatoria\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.pdb
+C:\Users\angel\Downloads\Convocatoria\Convocatoria\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.dll
+C:\Users\angel\Downloads\Convocatoria\Convocatoria\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.dll
+C:\Users\angel\Downloads\Convocatoria\Convocatoria\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.pdb
+C:\Users\angel\Downloads\Convocatoria\Convocatoria\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.pdb
+C:\Users\angel\Downloads\Convocatoria\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.AssemblyReference.cache
+C:\Users\angel\Downloads\Convocatoria\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\angel\Downloads\Convocatoria\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfoInputs.cache
+C:\Users\angel\Downloads\Convocatoria\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfo.cs
+C:\Users\angel\Downloads\Convocatoria\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.CoreCompileInputs.cache
+C:\Users\angel\Downloads\Convocatoria\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implemen.3739F620.Up2Date
+C:\Users\angel\Downloads\Convocatoria\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.dll
+C:\Users\angel\Downloads\Convocatoria\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\refint\Implementation.dll
+C:\Users\angel\Downloads\Convocatoria\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.pdb
+C:\Users\angel\Downloads\Convocatoria\Convocatoria\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\ref\Implementation.dll
+C:\Users\Isaias\Videos\Convocatoria_Angelo\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.deps.json
+C:\Users\Isaias\Videos\Convocatoria_Angelo\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.dll
+C:\Users\Isaias\Videos\Convocatoria_Angelo\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.pdb
+C:\Users\Isaias\Videos\Convocatoria_Angelo\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.dll
+C:\Users\Isaias\Videos\Convocatoria_Angelo\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.dll
+C:\Users\Isaias\Videos\Convocatoria_Angelo\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.pdb
+C:\Users\Isaias\Videos\Convocatoria_Angelo\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.pdb
+C:\Users\Isaias\Videos\Convocatoria_Angelo\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.AssemblyReference.cache
+C:\Users\Isaias\Videos\Convocatoria_Angelo\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Isaias\Videos\Convocatoria_Angelo\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfoInputs.cache
+C:\Users\Isaias\Videos\Convocatoria_Angelo\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfo.cs
+C:\Users\Isaias\Videos\Convocatoria_Angelo\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.CoreCompileInputs.cache
+C:\Users\Isaias\Videos\Convocatoria_Angelo\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implemen.3739F620.Up2Date
+C:\Users\Isaias\Videos\Convocatoria_Angelo\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.dll
+C:\Users\Isaias\Videos\Convocatoria_Angelo\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\refint\Implementation.dll
+C:\Users\Isaias\Videos\Convocatoria_Angelo\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.pdb
+C:\Users\Isaias\Videos\Convocatoria_Angelo\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\ref\Implementation.dll
+C:\Users\Gonzalo\Documents\analisis\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.deps.json
+C:\Users\Gonzalo\Documents\analisis\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.dll
+C:\Users\Gonzalo\Documents\analisis\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.pdb
+C:\Users\Gonzalo\Documents\analisis\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.dll
+C:\Users\Gonzalo\Documents\analisis\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.dll
+C:\Users\Gonzalo\Documents\analisis\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.pdb
+C:\Users\Gonzalo\Documents\analisis\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.pdb
+C:\Users\Gonzalo\Documents\analisis\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.AssemblyReference.cache
+C:\Users\Gonzalo\Documents\analisis\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gonzalo\Documents\analisis\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfoInputs.cache
+C:\Users\Gonzalo\Documents\analisis\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfo.cs
+C:\Users\Gonzalo\Documents\analisis\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.CoreCompileInputs.cache
+C:\Users\Gonzalo\Documents\analisis\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implemen.3739F620.Up2Date
+C:\Users\Gonzalo\Documents\analisis\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.dll
+C:\Users\Gonzalo\Documents\analisis\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\refint\Implementation.dll
+C:\Users\Gonzalo\Documents\analisis\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.pdb
+C:\Users\Gonzalo\Documents\analisis\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\ref\Implementation.dll
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.deps.json
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.dll
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Implementation.pdb
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.dll
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.dll
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\Interface.pdb
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\bin\Debug\net8.0\WebApi.Model.pdb
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.AssemblyReference.cache
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfoInputs.cache
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.AssemblyInfo.cs
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.csproj.CoreCompileInputs.cache
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implemen.3739F620.Up2Date
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.dll
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\refint\Implementation.dll
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\Implementation.pdb
+C:\Users\Isaias\Downloads\Proyecto\Proyecto\Convocatoria_Angelo\ProjectIV-main\Services\Implementation\obj\Debug\net8.0\ref\Implementation.dll
