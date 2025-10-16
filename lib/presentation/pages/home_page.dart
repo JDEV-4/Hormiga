@@ -6,7 +6,7 @@ import '../widgets/organisms/post_card.dart';
 import 'create_post_page.dart';
 import 'report_incident_page.dart'; 
 import 'mapa_incidentes_page.dart';
-
+import 'chatbot_page.dart'; // <--- Importa tu página del chatbot
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -104,13 +104,11 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: const Color(0xFF006D65),
           child: const Icon(Icons.add, color: Colors.white),
           onPressed: () async {
-            // Abrir CreatePostPage y esperar resultado
             final result = await Navigator.push(
               context,
               MaterialPageRoute(builder: (_) => const CreatePostPage()),
             );
 
-            // Si se publicó algo, recargar posts
             if (result != null && result == true) {
               await context.read<HomeController>().loadPosts();
             }
@@ -125,7 +123,6 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.white,
       child: Column(
         children: [
-          // Perfil
           Container(
             width: double.infinity,
             padding:
@@ -161,15 +158,11 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-
-          // Menú principal
           Expanded(
             child: ListView(
               padding: EdgeInsets.zero,
               children: [
                 const SizedBox(height: 8),
-
-                // ✅ Navegación a ReportIncidentPage
                 _buildMenuItem(Icons.report, 'Reportar Incidente', Colors.red,
                     () {
                   Navigator.push(
@@ -178,30 +171,28 @@ class _HomePageState extends State<HomePage> {
                         builder: (_) => const ReportIncidentPage()),
                   );
                 }),
-
                 _buildMenuItem(Icons.map, 'Mapa de Incidentes', Colors.green, () {
-                 Navigator.push(
-                 context,
-                   MaterialPageRoute(builder: (_) => const MapaIncidentesPage()),
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const MapaIncidentesPage()),
                   );
                 }),
-
-                _buildMenuItem(
-                    Icons.school, 'Módulo Educativo', Colors.blue, () {}),
+                _buildMenuItem(Icons.school, 'Módulo Educativo', Colors.blue, () {}),
                 const Divider(),
-                _buildMenuItem(
-                    Icons.groups, 'Comunidad', Colors.orange, () {}),
+                _buildMenuItem(Icons.groups, 'Comunidad', Colors.orange, () {}),
                 _buildMenuItem(Icons.chat_bubble, 'Chatbot de la Hormiga',
-                    Colors.teal, () {}),
+                    Colors.teal, () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const ChatbotPage()),
+                  );
+                }),
                 const Divider(),
-                _buildMenuItem(
-                    Icons.bar_chart, 'Estadísticas', Colors.purple, () {}),
-                _buildMenuItem(
-                    Icons.settings, 'Configuración', Colors.grey, () {}),
+                _buildMenuItem(Icons.bar_chart, 'Estadísticas', Colors.purple, () {}),
+                _buildMenuItem(Icons.settings, 'Configuración', Colors.grey, () {}),
               ],
             ),
           ),
-
           const Divider(),
           Padding(
             padding:

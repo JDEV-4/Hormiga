@@ -24,14 +24,14 @@ class MapaIncidentesPage extends StatelessWidget {
         iconPath = 'assets/icons/power.png';
         break;
       default:
-        iconPath = 'assets/icons/fire.png'; // icono por defecto
+        iconPath = 'assets/icons/fire.png'; 
     }
 
     return Image.asset(
       iconPath,
       width: 40,
       height: 40,
-      color: esNuevo ? Colors.green : null, // resalta el nuevo
+      color: esNuevo ? Colors.green : null,
     );
   }
 
@@ -58,7 +58,7 @@ class MapaIncidentesPage extends StatelessWidget {
 
     final LatLng center = incidenteNuevo != null
         ? incidenteNuevo!['ubicacion']
-        : LatLng(12.8654, -85.2072); // Centro de Nicaragua por defecto
+        : LatLng(12.8654, -85.2072);
 
     return Scaffold(
       appBar: AppBar(
