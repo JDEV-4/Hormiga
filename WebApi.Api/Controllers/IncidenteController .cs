@@ -16,14 +16,25 @@ namespace WebApi.Api.Controllers
          private readonly IIncidenteService _service;
         public IncidenteController(IIncidenteService service) { _service = service; }
 
-         [HttpPost("crear")]
+    [HttpPost("crear")]
     public async Task<IActionResult> Crear([FromBody] IncidenteCrearDto dto)
     {
         if (dto == null)
             return BadRequest("El cuerpo de la solicitud no puede ser nulo.");
 
-        var id = await _service.CrearAsync(dto);
-        return Ok(new { mensaje = "Incidente creado correctamente", id });
+        try
+        {
+            var id = await _service.CrearAsync(dto);
+            return Ok(new
+            {
+                mensaje = "Incidente y fotos registradas correctamente.",
+                incidenteId = id
+            });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { mensaje = "Error al crear incidente", detalle = ex.Message });
+        }
     }
 
 
