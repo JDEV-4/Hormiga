@@ -21,6 +21,9 @@ builder.Services.AddScoped<IComunicacionService, ComunicacionService>();
 builder.Services.AddScoped<IInteraccionComentarioService, InteraccionComentarioService>();
 builder.Services.AddScoped<IAmenazaEducativaService, AmenazaEducativaService>();
 builder.Services.AddScoped<IContenidoEducativoService, ContenidoEducativoService>();
+builder.Services.AddScoped<ITipoIncidenteService, TipoIncidenteService>();
+builder.Services.AddScoped<IIncidenteService, IncidenteService>();
+builder.Services.AddScoped<IFotoIncidenteService, FotoIncidenteService>();
 
 builder.Services.AddScoped<IPublicacionService, PublicacionService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
