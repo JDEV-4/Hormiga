@@ -389,7 +389,7 @@ END
 GO
 
 
-
+--version 1
 -- GESTIÓN DE INCIDENTES
 CREATE TABLE Tipos_Incidente (
     tipo_incidente_id INT PRIMARY KEY IDENTITY(1,1),
@@ -417,6 +417,40 @@ CREATE TABLE Fotos_Incidente (
     fecha_subida DATETIME DEFAULT GETDATE()
 );
 
+
+--cversion 2
+
+-- TABLA DE TIPOS DE INCIDENTE
+CREATE TABLE Tipos_Incidente (
+    tipo_incidente_id INT PRIMARY KEY IDENTITY(1,1),
+    nombre VARCHAR(50) UNIQUE NOT NULL,       -- Ej: 'Incendio', 'Inundación'
+    icono_mapa VARCHAR(255),                 -- Ruta del icono para el mapa
+    color_hex CHAR(7)                        -- Color para mostrar en el mapa, ej: '#FF0000'
+);
+
+-- TABLA DE INCIDENTES (ubicación obligatoria)
+CREATE TABLE Incidentes (
+    incidente_id INT PRIMARY KEY IDENTITY(1,1),
+    usuario_id INT NOT NULL REFERENCES Usuario(usuario_id),  -- Quién reporta
+    tipo_incidente_id INT NOT NULL REFERENCES Tipos_Incidente(tipo_incidente_id),
+    descripcion TEXT NOT NULL,
+    latitud DECIMAL(10,7) NOT NULL,        -- Latitud obligatoria
+    longitud DECIMAL(10,7) NOT NULL,       -- Longitud obligatoria
+    departamento VARCHAR(50) NOT NULL,     -- Obligatorio
+    municipio VARCHAR(50) NOT NULL,        -- Obligatorio
+    comunidad VARCHAR(50) NOT NULL,        -- Obligatorio
+    estado VARCHAR(20) NOT NULL DEFAULT 'Reportado',  -- Reportado, En Atención, Resuelto
+    fecha_reporte DATETIME DEFAULT GETDATE(),
+    fecha_cierre DATETIME
+);
+
+-- TABLA DE FOTOS DE INCIDENTE
+CREATE TABLE Fotos_Incidente (
+    foto_id INT PRIMARY KEY IDENTITY(1,1),
+    incidente_id INT NOT NULL REFERENCES Incidentes(incidente_id),
+    url_foto VARCHAR(255) NOT NULL,        -- URL o ruta de la imagen
+    fecha_subida DATETIME DEFAULT GETDATE()
+);
 
 
 
