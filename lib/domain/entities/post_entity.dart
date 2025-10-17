@@ -5,7 +5,7 @@ class PostEntity {
   final String content;
   final String avatarUrl;
   final String imageUrl;
-  final String location; // obligatorio
+  final String location;
   final int likes;
   final int comments;
 

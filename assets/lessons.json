@@ -1,0 +1,34 @@
+[
+  {
+    "id": "s1",
+    "module": "Sismos",
+    "title": "Qué hacer durante un sismo",
+    "summary": "Pasos: agacharse, cubrirse y sujetarse.",
+    "category": "Sismos",
+    "relevanceZones": ["todos"]
+  },
+  {
+    "id": "i1",
+    "module": "Incendios",
+    "title": "Prevención de incendios domésticos",
+    "summary": "Mantén extintores y rutas de escape.",
+    "category": "Incendios",
+    "relevanceZones": ["todos"]
+  },
+  {
+    "id": "d1",
+    "module": "Deslaves",
+    "title": "Señales de deslizamiento",
+    "summary": "Grietas y drenajes obstruidos: atención.",
+    "category": "Deslaves",
+    "relevanceZones": ["pendiente"]
+  },
+  {
+    "id": "in1",
+    "module": "Inundaciones",
+    "title": "Medidas en caso de inundaciones",
+    "summary": "Sube enseres, usa rutas seguras.",
+    "category": "Inundaciones",
+    "relevanceZones": ["inundable"]
+  }
+]

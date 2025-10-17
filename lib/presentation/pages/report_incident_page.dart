@@ -18,6 +18,9 @@ class _ReportIncidentPageState extends State<ReportIncidentPage> {
   String? _selectedType;
   final TextEditingController _descriptionController = TextEditingController();
 
+  // 🔹 Color institucional principal
+  static const Color azul = Color(0xFF234A68);
+
   final List<String> _incidentTypes = [
     'Inundación',
     'Incendio',
@@ -84,13 +87,11 @@ class _ReportIncidentPageState extends State<ReportIncidentPage> {
     );
 
     try {
-      // Obtener ubicación GPS exacta
       Position position = await Geolocator.getCurrentPosition(
           desiredAccuracy: LocationAccuracy.bestForNavigation);
 
       _currentPosition = LatLng(position.latitude, position.longitude);
 
-      // Geocoding inverso para obtener Departamento, Municipio y Comunidad
       List<Placemark> placemarks =
           await placemarkFromCoordinates(position.latitude, position.longitude);
 
@@ -154,7 +155,10 @@ class _ReportIncidentPageState extends State<ReportIncidentPage> {
                 ),
               );
             },
-            child: const Text('OK', style: TextStyle(color: Color(0xFF006D65))),
+            child: const Text(
+              'OK',
+              style: TextStyle(color: azul, fontWeight: FontWeight.bold),
+            ),
           ),
         ],
       ),
@@ -166,7 +170,7 @@ class _ReportIncidentPageState extends State<ReportIncidentPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Reportar Incidente'),
-        backgroundColor: const Color(0xFF006D65),
+        backgroundColor: azul, // 🔹 Color aplicado al encabezado
         iconTheme: const IconThemeData(color: Colors.white),
         titleTextStyle: const TextStyle(
           color: Colors.white,
@@ -253,15 +257,17 @@ class _ReportIncidentPageState extends State<ReportIncidentPage> {
                 width: double.infinity,
                 child: ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF006D65),
+                    backgroundColor: azul, 
                     minimumSize: const Size.fromHeight(50),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
                   ),
                   icon: const Icon(Icons.send, color: Colors.white),
-                  label: const Text('Enviar reporte',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold)),
+                  label: const Text(
+                    'Enviar reporte',
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
                   onPressed: _submitReport,
                 ),
               ),

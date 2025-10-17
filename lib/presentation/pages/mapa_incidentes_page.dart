@@ -7,6 +7,9 @@ class MapaIncidentesPage extends StatelessWidget {
 
   const MapaIncidentesPage({super.key, this.incidenteNuevo});
 
+  // 🔹 Color institucional principal
+  static const Color azul = Color(0xFF234A68);
+
   // Función que devuelve el icono según el tipo de incidente
   Widget _getMarkerIcon(String tipo, bool esNuevo) {
     String iconPath;
@@ -20,18 +23,16 @@ class MapaIncidentesPage extends StatelessWidget {
       case 'Deslizamiento':
         iconPath = 'assets/icons/landslide.png';
         break;
-      case 'Corte de energía':
-        iconPath = 'assets/icons/power.png';
-        break;
+     
       default:
-        iconPath = 'assets/icons/fire.png'; 
+        iconPath = 'assets/icons/fire.png';
     }
 
     return Image.asset(
       iconPath,
       width: 40,
       height: 40,
-      color: esNuevo ? Colors.green : null,
+      color: esNuevo ? Colors.green : null, // marcador del incidente nuevo
     );
   }
 
@@ -63,7 +64,13 @@ class MapaIncidentesPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Mapa de Incidentes'),
-        backgroundColor: const Color(0xFF006D65),
+        backgroundColor: azul, // 🔹 color aplicado al encabezado
+        titleTextStyle: const TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+          fontSize: 20,
+        ),
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: FlutterMap(
         options: MapOptions(
@@ -118,7 +125,7 @@ class MapaIncidentesPage extends StatelessWidget {
             style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
-              color: Color(0xFF006D65),
+              color: azul, // 🔹 color aplicado al título del incidente
             ),
           ),
           const SizedBox(height: 8),
